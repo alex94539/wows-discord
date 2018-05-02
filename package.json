@@ -1,0 +1,18 @@
+{
+  "name": "wows",
+  "version": "1.0.0",
+  "description": "Statistics advanced engine for World of Warships",
+  "main": "Euphokumiko.js",
+  "scripts": {
+    "start": "node EUphokumiko.js"
+  },
+  "license": "none",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "jsonfile": "^4.0.0",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "utf8": "^3.0.0",
+    "winston": "^2.4.2"
+  }
+}
