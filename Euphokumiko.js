@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+﻿const discord = require("discord.js");
 const rp = require("request-promise");
 const jsonfile = require("jsonfile");
 const logger = require('winston');
@@ -18,21 +18,21 @@ let name, userID;
 let wins, losses, battles, averagedamage, clan, winrate;
 
 function ERROR() {
-    let temp = "Wrong ID";
+    let temp = "查無此人，請重新輸入";
     return temp;
 }
 
 function sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan) {
     let temp = new discord.RichEmbed()
-        .setTitle("Know your enemy~")
+        .setTitle("查水表時間！")
         .setThumbnail("https://i.imgur.com/cO8B0P8.jpg")
         .setColor(3447003)
-        .addField("PlayerName:",name)
-        .addField("Total Battles:", battles)
-        .addField("Winrate:", winrate + "%")
-        .addField("Averagedamage:", averagedamage)
-        .addField("Clan:",clan)
-        .setFooter("Matsuura Kanan")
+        .addField("玩家暱稱：",name)
+        .addField("戰鬥場數：", battles)
+        .addField("勝率：", winrate + "%")
+        .addField("均傷：", averagedamage)
+        .addField("公會：",clan)
+        .setFooter("松浦　果南")
         .setTimestamp();
     return temp;
 }
@@ -42,7 +42,7 @@ function sendmessagetodiscord_clan() {
 }
 
 client.on('ready', function (evt) {
-    logger.info("Connect");
+    logger.info("Connected");
 
     logger.info('Logged in as: ');
 
@@ -107,7 +107,9 @@ client.on('message', (message) => {
                 break;
 
             default:
-                message.channel.send("���O���~�A�Ф��n�ê��ڡA����");
+                let msg = "指令錯誤，請不要亂玩我，謝謝";
+                
+                message.channel.send(msg);
                 break;
         }
 
