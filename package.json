@@ -4,7 +4,7 @@
   "description": "Statistics advanced engine for World of Warships",
   "main": "Euphokumiko.js",
   "scripts": {
-    "start": "node EUphokumiko.js"
+    "start": "node Euphokumiko.js"
   },
   "license": "none",
   "dependencies": {
