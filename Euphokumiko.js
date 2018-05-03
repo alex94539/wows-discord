@@ -3,6 +3,7 @@ const rp = require("request-promise");
 const jsonfile = require("jsonfile");
 const logger = require('winston');
 const apikey = require("./apikey.json");
+const shipdata = require("./shipdata.json");
 const utf8 = require('utf8');
 
 const client = new discord.Client({ autoreconnect: true });
@@ -12,17 +13,20 @@ const wows_CLAN_ID_url = "https://api.worldofwarships.asia/wows/clans/accountinf
 const wows_CLAN_ID_TAG_url = "https://api.worldofwarships.asia/wows/clans/list/?application_id="
 const wows_DATA_url = "https://api.worldofwarships.asia/wows/account/info/?application_id=";
 const wows_CLAN_url = "https://api.worldofwarships.asia/wows/clans/info/?application_id=";
+const wows_SHIP_DATA_url = "https://api.worldofwarships.asia/wows/ships/stats/?application_id="
 
 client.login(apikey.token);
 
 //
 
 let command;
-let name, userID, clanID;
+let name, userID, clanID, shipname;
 let wins, losses, battles, averagedamage, clan, winrate, ship;
 let createdAt;
 let clanleader, clanname, membernum;
 let flginsd;
+let averagefrag, averageexp;
+let picurl;
 
 function check(a) {
     if (a != null) {
@@ -68,6 +72,28 @@ function sendmessagetodiscord_clan(clanname, clanleader, membernum, clan, channe
         .setFooter("松浦　果南")
         .setTimestamp();
     channel.send({ embed });
+}
+
+function sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, channel) {
+    let winrate = ((wins / battles) * 100).toFixed(2);
+    let embed = new discord.RichEmbed()
+        .setTitle("查水表時間！")
+        .setThumbnail(picurl)
+        .setColor(3447003)
+        .addField("玩家暱稱：", name)
+        .addField("船艦名稱", shipname)
+        .addField("戰鬥場數", battles)
+        .addField("勝率", winrate + "%")
+        .addField("場均傷害：", averagedamage.toFixed(0))
+        .addField("場均經驗：", averageexp.toFixed(0))
+        .addField("場均擊沉：", averagefrag.toFixed(1))
+        .setFooter("松浦　果南")
+        .setTimestamp();
+    channel.send({ embed });
+}
+
+function nosuchship(channel) {
+    channel.send("該玩家沒有此船艦的遊玩紀錄");
 }
 
 client.on('ready', function (evt) {
@@ -209,12 +235,67 @@ client.on('message', (message) => {
 
                 case "playership":
                     if (check(ship)) {
+                        rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {
+                            let temp = JSON.parse(data);
 
+                            if (temp.data[0] != null) {
+                                flginsd = false;
+                                for (let m = 0; m < temp.data.length; m++) {
+                                    if (temp.data[m].nickname.toLowerCase() == name.toLowerCase()) {
+                                        name = temp.data[0].nickname;
+                                        userID = temp.data[0].account_id;
+                                        userID = userID.toString();
+                                        flginsd = true;
+                                        //console.log(name + " " + userID);
+                                        break;
+                                    }
+                                }
+                                if (flginsd) {
+                                    let ui = false;
+                                    let index, ship_id;
+                                    for (let j = 0; j < shipdata.length; j++) {
+                                        for (let z = 0; z < shipdata[j].name.length; z++) {
+                                            if (ship.toLowerCase() === shipdata[j].name[z].toLowerCase()) {
+                                                ui = true;
+                                                break;
+                                            } 
+                                        }
+                                        if (ui) {
+                                            index = j;
+                                            picurl = shipdata[index].picurl;
+                                            break;
+                                        }
+                                    }
+                                    shipname = shipdata[index].name[shipdata[index].name.length - 1];
+                                    ship_id = shipdata[index].id;
+                                    //console.log(index + " " + shipname + " " + ship_id);
+                                    //console.log(wows_SHIP_DATA_url + apikey.ApiKey + "&ship_id=" + ship_id + "&account_id=" + userID);
+                                    rp(wows_SHIP_DATA_url + apikey.ApiKey + "&ship_id=" + ship_id + "&account_id=" + userID).then(data => {
+                                        let temp = JSON.parse(data);
+                                        console.log(temp);
+                                        console.log(temp.data[userID][0].pvp.wins);
+                                        if (temp.data[userID] != null) {
+                                            battles = temp.data[userID][0].battles;
+                                            wins = temp.data[userID][0].pvp.wins;
+                                            averagedamage = temp.data[userID][0].pvp.damage_dealt / battles;
+                                            averagefrag = temp.data[userID][0].pvp.frags / battles;
+                                            averageexp = temp.data[userID][0].pvp.xp / battles;
+                                            sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, message.channel);
+                                        }
+                                        else {
+                                            nosuchship(message.channel);
+                                        }
+                                    })
+                                }
+                                else {
+                                    ERROR(message.channel);
+                                }
+                            }
+                        })
                     }
                     else {
                         error(message.channel);
                     }
-                    message.channel.send("work in progress...");
                     break;
 
                 default:
