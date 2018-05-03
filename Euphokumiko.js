@@ -22,6 +22,7 @@ let name, userID, clanID;
 let wins, losses, battles, averagedamage, clan, winrate, ship;
 let createdAt;
 let clanleader, clanname, membernum;
+let flginsd;
 
 function check(a) {
     if (a != null) {
@@ -138,15 +139,22 @@ client.on('message', (message) => {
                     if (check(name)) {
                         rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {
                             let temp = JSON.parse(data);
+                            
                             if (temp.data[0] != null) {
-                                name = temp.data[0].nickname;
-                                userID = temp.data[0].account_id;
-                                userID = userID.toString();
-                                //
-                                rp(wows_DATA_url + apikey.ApiKey + "&account_id=" + userID).then(data => {
-                                    let tempA = JSON.parse(data);
-                                    if (tempA.status == "ok") {
-                                        if (tempA.data[userID] != null) {
+                                flginsd = false;
+                                for (let m = 0; m < temp.data.length; m++) {
+                                    if (temp.data[m].nickname.toLowerCase() == name.toLowerCase()) {
+                                        name = temp.data[0].nickname;
+                                        userID = temp.data[0].account_id;
+                                        userID = userID.toString();
+                                        flginsd = true;
+                                        break;
+                                    }
+                                }
+                                if (flginsd) {
+                                    rp(wows_DATA_url + apikey.ApiKey + "&account_id=" + userID).then(data => {
+                                        let tempA = JSON.parse(data);
+                                        if ((tempA.status == "ok") && (tempA.data[userID]!=null)) {
                                             //
                                             wins = tempA.data[userID].statistics.pvp.wins;
                                             losses = tempA.data[userID].statistics.pvp.losses;
@@ -157,7 +165,7 @@ client.on('message', (message) => {
                                             //
                                             rp(wows_CLAN_ID_url + apikey.ApiKey + "&account_id=" + userID).then(data => {
                                                 let tempB = JSON.parse(data);
-                                                if (tempB.data[userID] != null) {
+                                                if ((tempB.data[userID] != null) && (tempB.status == "ok") && (tempB.data[userID].clan_id != null)) {
                                                     clanID = tempB.data[userID].clan_id;
                                                     rp(wows_CLAN_url + apikey.ApiKey + "&clan_id=" + clanID).then(data => {
                                                         let tempC = JSON.parse(data);
@@ -173,22 +181,20 @@ client.on('message', (message) => {
                                                     message.channel.send({ embed });
                                                 }
                                             })
-
-
-                                            //
-
-
-
                                         }
                                         else {
                                             ERROR(message.channel);
                                         }
-                                    }
-                                    else {
-                                        ERROR(message.channel);
-                                    }
 
-                                })
+                                    })
+                                }
+                                else {
+                                    ERROR(message.channel);
+                                }
+
+                                
+                                //
+                                
                             }
                             else {
                                 ERROR(message.channel);
