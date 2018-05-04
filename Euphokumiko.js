@@ -246,7 +246,7 @@ client.on('message', (message) => {
                                         userID = temp.data[0].account_id;
                                         userID = userID.toString();
                                         flginsd = true;
-                                        //console.log(name + " " + userID);
+                                        console.log(name + " " + userID);
                                         break;
                                     }
                                 }
@@ -266,26 +266,33 @@ client.on('message', (message) => {
                                             break;
                                         }
                                     }
-                                    shipname = shipdata[index].name[shipdata[index].name.length - 1];
-                                    ship_id = shipdata[index].id;
-                                    //console.log(index + " " + shipname + " " + ship_id);
-                                    //console.log(wows_SHIP_DATA_url + apikey.ApiKey + "&ship_id=" + ship_id + "&account_id=" + userID);
-                                    rp(wows_SHIP_DATA_url + apikey.ApiKey + "&ship_id=" + ship_id + "&account_id=" + userID).then(data => {
-                                        let temp = JSON.parse(data);
-                                        console.log(temp);
-                                        console.log(temp.data[userID][0].pvp.wins);
-                                        if (temp.data[userID] != null) {
-                                            battles = temp.data[userID][0].battles;
-                                            wins = temp.data[userID][0].pvp.wins;
-                                            averagedamage = temp.data[userID][0].pvp.damage_dealt / battles;
-                                            averagefrag = temp.data[userID][0].pvp.frags / battles;
-                                            averageexp = temp.data[userID][0].pvp.xp / battles;
-                                            sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, message.channel);
-                                        }
-                                        else {
-                                            nosuchship(message.channel);
-                                        }
-                                    })
+                                    if (ui) {
+                                        shipname = shipdata[index].name[shipdata[index].name.length - 1];
+                                        ship_id = shipdata[index].id;
+                                        //console.log(index + " " + shipname + " " + ship_id);
+                                        //console.log(wows_SHIP_DATA_url + apikey.ApiKey + "&ship_id=" + ship_id + "&account_id=" + userID);
+                                        rp(wows_SHIP_DATA_url + apikey.ApiKey + "&ship_id=" + ship_id + "&account_id=" + userID).then(data => {
+                                            let temp = JSON.parse(data);
+                                            //console.log(temp);
+                                            //console.log(temp.data[userID][0].pvp.wins);
+                                            if (temp.data[userID] != null) {
+
+                                                wins = temp.data[userID][0].pvp.wins;
+                                                losses = temp.data[userID][0].pvp.losses;
+                                                battles = wins + losses
+                                                averagedamage = temp.data[userID][0].pvp.damage_dealt / battles;
+                                                averagefrag = temp.data[userID][0].pvp.frags / battles;
+                                                averageexp = temp.data[userID][0].pvp.xp / battles;
+                                                sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, message.channel);
+                                            }
+                                            else {
+                                                nosuchship(message.channel);
+                                            }
+                                        })
+                                    }
+                                    else {
+                                        ERROR(message.channel);
+                                    }
                                 }
                                 else {
                                     ERROR(message.channel);

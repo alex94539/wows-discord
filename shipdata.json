@@ -535,6 +535,239 @@
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSC034.png"
   },
   {
+    "id": "4292753104",
+    "name": [
+      "Umikaze"
+    ],
+    "tier": 2,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD002.png"
+  },
+  {
+    "id": "4293801680",
+    "name": [
+      "Tachibana",
+      "橘"
+    ],
+    "tier": 2,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD001.png"
+  },
+  {
+    "id": "4280170192",
+    "name": [
+      "Tachibana Lima",
+      "橘 L"
+    ],
+    "tier": 2,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD014.png"
+  },
+  {
+    "id": "4269684432",
+    "name": [
+      "Wakatake",
+      "若竹"
+    ],
+    "tier": 3,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD024.png"
+  },
+  {
+    "id": "4291704528",
+    "name": [
+      "Isokaze",
+      "磯風"
+    ],
+    "tier": 4,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD003.png"
+  },
+  {
+    "id": "4290655952",
+    "name": [
+      "Minekaze",
+      "峯風"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD004.png"
+  },
+  {
+    "id": "4184749776",
+    "name": [
+      "Mutsuki",
+      "睦月"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD105.png"
+  },
+  {
+    "id": "4268635856",
+    "name": [
+      "Kamikaze",
+      "神風"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD025.png"
+  },
+  {
+    "id": "4267587280",
+    "name": [
+      "Kamikaze R",
+      "神風 R"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD026.png"
+  },
+  {
+    "id": "4277024464",
+    "name": [
+      "Fūjin",
+      "Fujin",
+      "風神"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD017.png"
+  },
+  {
+    "id": "4183701200",
+    "name": [
+      "Fubuki",
+      "吹雪"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD106.png"
+  },
+  {
+    "id": "4078843600",
+    "name": [
+      "Hatsuharu",
+      "初春"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD206.png"
+  },
+  {
+    "id": "3554555600",
+    "name": [
+      "Shinonome",
+      "東雲"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD706.png"
+  },
+  {
+    "id": "4077795024",
+    "name": [
+      "Shiratsuyu",
+      "白露"
+    ],
+    "tier": 7,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD207.png"
+  },
+  {
+    "id": "4182652624",
+    "name": [
+      "Akatsuki",
+      "曉"
+    ],
+    "tier": 7,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD107.png"
+  },
+  {
+    "id": "4076746448",
+    "name": [
+      "Kagero",
+      "陽炎"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD208.png"
+  },
+  {
+    "id": "4181604048",
+    "name": [
+      "Akizuki",
+      "秋月"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD108.png"
+  },
+  {
+    "id": "3751687888",
+    "name": [
+      "Asashio",
+      "朝潮"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD518.png"
+  },
+  {
+    "id": "3552458448",
+    "name": [
+      "HSF Harekaze",
+      "高校 晴風",
+      "HSF 晴風"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD708.png"
+  },
+  {
+    "id": "4075697872",
+    "name": [
+      "Yūgumo",
+      "Yugumo",
+      "夕雲"
+    ],
+    "tier": 9,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD209.png"
+  },
+  {
+    "id": "4282267344",
+    "name": [
+      "Shimakaze",
+      "島風"
+    ],
+    "tier": 10,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD012.png"
+  },
+  {
     "id": "4290754544",
     "name": [
       "Langley",
@@ -634,17 +867,6 @@
     "type": "航空母艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA015.png"
-  },
-  {
-    "id": "3762272048",
-    "name": [
-      "Graf Zeppelin",
-      "齊柏林"
-    ],
-    "tier": "8",
-    "type": "航空母艦",
-    "nation": "Germany",
-    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSA508.png"
   },
   {
     "id": "4293867504",
@@ -892,7 +1114,8 @@
   {
     "id": "4248745968",
     "name": [
-      "Marblehead"
+      "Marblehead",
+      "馬布黑爾德"
     ],
     "tier": 5,
     "type": "巡洋艦",
@@ -914,7 +1137,7 @@
     "id": "4282300400",
     "name": [
       "Pensacola",
-      "彭薩克拉"
+      "彭薩科拉"
     ],
     "tier": 7,
     "type": "巡洋艦",
@@ -947,7 +1170,7 @@
     "id": "3763255280",
     "name": [
       "Indianapolis",
-      "印第安納波里斯"
+      "印第安納波利斯"
     ],
     "tier": 7,
     "type": "巡洋艦",
@@ -969,7 +1192,7 @@
     "id": "4277057520",
     "name": [
       "Baltimore",
-      "巴爾第摩"
+      "巴爾的摩"
     ],
     "tier": 9,
     "type": "巡洋艦",
@@ -997,6 +1220,171 @@
     "type": "巡洋艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC710.png"
+  },
+  {
+    "id": "3768465392",
+    "name": [
+      "Smith",
+      "史密斯"
+    ],
+    "tier": 2,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD502.png"
+  },
+  {
+    "id": "4292753392",
+    "name": [
+      "Sampson",
+      "桑普森"
+    ],
+    "tier": 2,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD002.png"
+  },
+  {
+    "id": "4266538992",
+    "name": [
+      "Wickes",
+      "維克斯"
+    ],
+    "tier": 3,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD027.png"
+  },
+  {
+    "id": "4274927600",
+    "name": [
+      "Clemson",
+      "克萊門森"
+    ],
+    "tier": 4,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD019.png"
+  },
+  {
+    "id": "4280170480",
+    "name": [
+      "Nicholas",
+      "尼可拉斯"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD014.png"
+  },
+  {
+    "id": "4289607664",
+    "name": [
+      "Farragut",
+      "法拉格特"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD005.png"
+  },
+  {
+    "id": "3764271088",
+    "name": [
+      "Monaghan",
+      "莫那甘"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD506.png"
+  },
+  {
+    "id": "4288559088",
+    "name": [
+      "Mahan",
+      "馬漢"
+    ],
+    "tier": 7,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD006.png"
+  },
+  {
+    "id": "4264441840",
+    "name": [
+      "Sims",
+      "辛姆斯"
+    ],
+    "tier": 7,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD029.png"
+  },
+  {
+    "id": "4286461936",
+    "name": [
+      "Benson",
+      "班森"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD008.png"
+  },
+  {
+    "id": "3762173936",
+    "name": [
+      "Kidd",
+      "紀德"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD508.png"
+  },
+  {
+    "id": "4272830448",
+    "name": [
+      "Fletcher",
+      "佛萊徹"
+    ],
+    "tier": 9,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD021.png"
+  },
+  {
+    "id": "3551410160",
+    "name": [
+      "Black",
+      "布萊克"
+    ],
+    "tier": 9,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD709.png"
+  },
+  {
+    "id": "4281219056",
+    "name": [
+      "Gearing",
+      "基靈"
+    ],
+    "tier": 10,
+    "type": "驅逐艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD013.png"
+  },
+  {
+    "id": "3762272048",
+    "name": [
+      "Graf Zeppelin",
+      "齊柏林"
+    ],
+    "tier": "8",
+    "type": "航空母艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSA508.png"
   },
   {
     "id": "4186912560",
@@ -1036,6 +1424,7 @@
     "id": "4184815408",
     "name": [
       "König",
+      "Konig",
       "國王"
     ],
     "tier": 5,
@@ -1102,6 +1491,7 @@
     "id": "4180621104",
     "name": [
       "Friedrich der Große",
+      "Friedrich der Grobe",
       "腓特烈大帝"
     ],
     "tier": 9,
@@ -1119,6 +1509,275 @@
     "type": "戰列艦",
     "nation": "germany",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSB110.png"
+  },
+  {
+    "id": "4293834544",
+    "name": [
+      "Hermelin",
+      "荷姆林"
+    ],
+    "tier": 1,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC001.png"
+  },
+  {
+    "id": "3768497968",
+    "name": [
+      "Emden",
+      "埃姆登"
+    ],
+    "tier": 2,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC502.png"
+  },
+  {
+    "id": "4292785968",
+    "name": [
+      "Dresden",
+      "德勒斯登"
+    ],
+    "tier": 2,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC002.png"
+  },
+  {
+    "id": "4186879792",
+    "name": [
+      "Kolberg",
+      "科爾柏格"
+    ],
+    "tier": 3,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC103.png"
+  },
+  {
+    "id": "4185831216",
+    "name": [
+      "Karlsruhe",
+      "卡爾斯魯赫"
+    ],
+    "tier": 4,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC104.png"
+  },
+  {
+    "id": "4184782640",
+    "name": [
+      "Königsberg",
+      "科尼斯堡"
+    ],
+    "tier": 5,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC105.png"
+  },
+  {
+    "id": "4183734064",
+    "name": [
+      "Nürnberg",
+      "紐倫堡"
+    ],
+    "tier": 6,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC106.png"
+  },
+  {
+    "id": "3764303664",
+    "name": [
+      "Admiral Graf Spee",
+      "施佩爾海軍上將"
+    ],
+    "tier": 6,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC506.png"
+  },
+  {
+    "id": "3554588464",
+    "name": [
+      "HSF Admiral Graf Spee",
+      "HSF 施佩爾海軍上將"
+    ],
+    "tier": 6,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC706.png"
+  },
+  {
+    "id": "4182685488",
+    "name": [
+      "Yorck",
+      "約克"
+    ],
+    "tier": 7,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC107.png"
+  },
+  {
+    "id": "4181636912",
+    "name": [
+      "Admiral Hipper",
+      "西佩爾海軍上將"
+    ],
+    "tier": 8,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC108.png"
+  },
+  {
+    "id": "3762206512",
+    "name": [
+      "Prinz Eugen",
+      "布丁",
+      "歐根親王"
+    ],
+    "tier": 8,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC508.png"
+  },
+  {
+    "id": "4180588336",
+    "name": [
+      "Roon",
+      "魯恩"
+    ],
+    "tier": 9,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC109.png"
+  },
+  {
+    "id": "4179539760",
+    "name": [
+      "Hindenburg",
+      "興登堡"
+    ],
+    "tier": 10,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSC110.png"
+  },
+  {
+    "id": "4187895600",
+    "name": [
+      "V-25"
+    ],
+    "tier": 2,
+    "type": "驅逐艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSD102.png"
+  },
+  {
+    "id": "4186847024",
+    "name": [
+      "G-101"
+    ],
+    "tier": 3,
+    "type": "驅逐艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSD103.png"
+  },
+  {
+    "id": "4185798448",
+    "name": [
+      "V-170"
+    ],
+    "tier": 4,
+    "type": "驅逐艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSD104.png"
+  },
+  {
+    "id": "4184749872",
+    "name": [
+      "T-22"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSD105.png"
+  },
+  {
+    "id": "4183701296",
+    "name": [
+      "Ernst Gaede",
+      "Gaede",
+      "蓋德"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSD106.png"
+  },
+  {
+    "id": "3764270896",
+    "name": [
+      "T-61"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSD506.png"
+  },
+  {
+    "id": "4182652720",
+    "name": [
+      "Leberecht Maass",
+      "Maass",
+      "瑪斯"
+    ],
+    "tier": 7,
+    "type": "驅逐艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSD107.png"
+  },
+  {
+    "id": "3762173744",
+    "name": [
+      "Z-39"
+    ],
+    "tier": 7,
+    "type": "驅逐艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSD508.png"
+  },
+  {
+    "id": "4181604144",
+    "name": [
+      "Z-23"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSD108.png"
+  },
+  {
+    "id": "4180555568",
+    "name": [
+      "Z-46"
+    ],
+    "tier": 9,
+    "type": "驅逐艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSD109.png"
+  },
+  {
+    "id": "4179506992",
+    "name": [
+      "Z-52"
+    ],
+    "tier": 10,
+    "type": "驅逐艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSD110.png"
   },
   {
     "id": "4186912720",
@@ -1257,7 +1916,7 @@
     "id": "4188977104",
     "name": [
       "Black Swan",
-      ""
+      "黑天鵝"
     ],
     "tier": 1,
     "type": "巡洋艦",
@@ -1301,6 +1960,7 @@
     "id": "4184782800",
     "name": [
       "Emerald",
+      "翡翠",
       "綠寶石"
     ],
     "tier": 5,
@@ -1373,6 +2033,28 @@
     "type": "巡洋艦",
     "nation": "UK",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSC110.png"
+  },
+  {
+    "id": "3764271056",
+    "name": [
+      "Gallant",
+      "英勇"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD506.png"
+  },
+  {
+    "id": "3767416784",
+    "name": [
+      "Campbeltown",
+      "坎貝爾城"
+    ],
+    "tier": 3,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD503.png"
   },
   {
     "id": "4186912592",
@@ -1500,6 +2182,7 @@
     "id": "4187928400",
     "name": [
       "Jurien de la Gravière",
+      "Jurien de la Graviere",
       "朱里恩"
     ],
     "tier": 2,
@@ -1533,6 +2216,7 @@
     "id": "4184782672",
     "name": [
       "Émile Bertin",
+      "Emile Bertin",
       "艾米爾 貝爾坦"
     ],
     "tier": 5,
@@ -1544,6 +2228,7 @@
     "id": "4183734096",
     "name": [
       "La Galissonnière",
+      "La Galissonniere",
       "拉 蓋利桑尼爾"
     ],
     "tier": 6,
@@ -1567,6 +2252,7 @@
     "id": "4182685520",
     "name": [
       "Algérie",
+      "Algerie",
       "阿爾及利亞"
     ],
     "tier": 7,
@@ -1608,6 +2294,17 @@
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PFSC110.png"
   },
   {
+    "id": "3764270928",
+    "name": [
+      "Aigle",
+      "鷹"
+    ],
+    "tier": "6",
+    "type": "驅逐艦",
+    "nation": "france",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PFSD506.png"
+  },
+  {
     "id": "4293866960",
     "name": [
       "Imperator Nikolai I",
@@ -1630,10 +2327,418 @@
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSB505.png"
   },
   {
+    "id": "4188976592",
+    "name": [
+      "Orlan",
+      "奧爾蘭"
+    ],
+    "tier": 1,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC101.png"
+  },
+  {
+    "id": "4187928016",
+    "name": [
+      "Novik",
+      "諾維克"
+    ],
+    "tier": 2,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC102.png"
+  },
+  {
+    "id": "4284397008",
+    "name": [
+      "Diana Lima",
+      "黛安娜 L"
+    ],
+    "tier": 2,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC010.png"
+  },
+  {
+    "id": "4292785616",
+    "name": [
+      "Diana",
+      "黛安娜"
+    ],
+    "tier": 2,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC002.png"
+  },
+  {
+    "id": "3756963280",
+    "name": [
+      "瓦良格"
+    ],
+    "tier": 3,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC513.png"
+  },
+  {
+    "id": "4186879440",
+    "name": [
+      "Bogatyr",
+      "英雄"
+    ],
+    "tier": 3,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC103.png"
+  },
+  {
+    "id": "3767449040",
+    "name": [
+      "Oleg",
+      "奧列格"
+    ],
+    "tier": 3,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC503.png"
+  },
+  {
+    "id": "4293834192",
+    "name": [
+      "Aurora",
+      "極光"
+    ],
+    "tier": 3,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC001.png"
+  },
+  {
+    "id": "4185830864",
+    "name": [
+      "Svietlana",
+      "思維特拉娜"
+    ],
+    "tier": 4,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC104.png"
+  },
+  {
+    "id": "4184782288",
+    "name": [
+      "Kirov",
+      "基洛夫"
+    ],
+    "tier": 5,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC105.png"
+  },
+  {
+    "id": "4291737040",
+    "name": [
+      "Murmansk",
+      "莫曼斯克"
+    ],
+    "tier": 5,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC003.png"
+  },
+  {
+    "id": "3765351888",
+    "name": [
+      "Krasny Krym",
+      "紅色克里米亞"
+    ],
+    "tier": 5,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC505.png"
+  },
+  {
+    "id": "4183733712",
+    "name": [
+      "Budyonny",
+      "布瓊尼"
+    ],
+    "tier": 6,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC106.png"
+  },
+  {
+    "id": "3659445712",
+    "name": [
+      "Admiral Makarov",
+      "馬卡洛夫上將"
+    ],
+    "tier": 6,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC606.png"
+  },
+  {
+    "id": "3764303312",
+    "name": [
+      "Molotov",
+      "莫洛托夫"
+    ],
+    "tier": 6,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC506.png"
+  },
+  {
+    "id": "4182685136",
+    "name": [
+      "Shchors",
+      "紹爾斯"
+    ],
+    "tier": 7,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC107.png"
+  },
+  {
+    "id": "4181636560",
+    "name": [
+      "Chapayev",
+      "恰帕耶夫"
+    ],
+    "tier": 8,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC108.png"
+  },
+  {
+    "id": "3762206160",
+    "name": [
+      "Mikhail Kutuzov",
+      "米哈伊爾 庫圖佐夫"
+    ],
+    "tier": 8,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC508.png"
+  },
+  {
+    "id": "4180587984",
+    "name": [
+      "Dmitri Donskoi",
+      "德米特里 頓斯科伊"
+    ],
+    "tier": 9,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC109.png"
+  },
+  {
+    "id": "3761157584",
+    "name": [
+      "Kronshtadt",
+      "克隆施塔"
+    ],
+    "tier": 9,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC509.png"
+  },
+  {
+    "id": "4179539408",
+    "name": [
+      "Moskva",
+      "莫斯科"
+    ],
+    "tier": 10,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC110.png"
+  },
+  {
+    "id": "4187895248",
+    "name": [
+      "Storozhevoi",
+      "施霍夫伊"
+    ],
+    "tier": 2,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD102.png"
+  },
+  {
+    "id": "4186846672",
+    "name": [
+      "Derzki",
+      "德斯基"
+    ],
+    "tier": 3,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD103.png"
+  },
+  {
+    "id": "4185798096",
+    "name": [
+      "Izyaslav",
+      "伊賈斯拉夫"
+    ],
+    "tier": 4,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD104.png"
+  },
+  {
+    "id": "4079891920",
+    "name": [
+      "Podvoisky",
+      "波德伏伊斯基"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD205.png"
+  },
+  {
+    "id": "4293801424",
+    "name": [
+      "Gremyashchy",
+      "雷鳴"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD001.png"
+  },
+  {
+    "id": "3765319120",
+    "name": [
+      "Okhotnik",
+      "獵人"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD505.png"
+  },
+  {
+    "id": "4078843344",
+    "name": [
+      "Gnevny",
+      "憤怒"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD206.png"
+  },
+  {
+    "id": "3763221968",
+    "name": [
+      "Leningrad",
+      "列寧格勒"
+    ],
+    "tier": 7,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD507.png"
+  },
+  {
+    "id": "4077794768",
+    "name": [
+      "Minsk",
+      "明斯克"
+    ],
+    "tier": 7,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD207.png"
+  },
+  {
+    "id": "4076746192",
+    "name": [
+      "Ognevoi",
+      "火爆"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD208.png"
+  },
+  {
+    "id": "3971888592",
+    "name": [
+      "Kiev",
+      "基輔"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD308.png"
+  },
+
+  {
+    "id": "4182652368",
+    "name": [
+      "Udaloi",
+      "大膽"
+    ],
+    "tier": 9,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD107.png"
+  },
+  {
+    "id": "3865982416",
+    "name": [
+      "Tashkent",
+      "塔什干"
+    ],
+    "tier": 9,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD409.png"
+  },
+  {
+    "id": "4074649040",
+    "name": [
+      "Grozovoi",
+      "雷爆"
+    ],
+    "tier": 10,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD210.png"
+  },
+  {
+    "id": "4179506640",
+    "name": [
+      "Khabarovsk",
+      "哈巴狗",
+      "哈巴羅夫斯克"
+    ],
+    "tier": 10,
+    "type": "驅逐艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSD110.png"
+  },
+  {
+    "id": "3760109008",
+    "name": [
+      "Stalingrad",
+      "史達林格勒"
+    ],
+    "tier": 10,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC510.png"
+  },
+  {
     "id": "3765384944",
     "name": [
       "Giulio Cesare",
-      "朱利奧 西薩雷"
+      "朱利奧 凱薩"
     ],
     "tier": 5,
     "type": "戰列艦",
@@ -1650,6 +2755,198 @@
     "type": "戰列艦",
     "nation": "Italy",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PISB508.png"
+  },
+  {
+    "id": "3764303600",
+    "name": [
+      "Duca d'Aosta",
+      "奧斯塔公爵"
+    ],
+    "tier": 6,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PISC506.png"
+  },
+  {
+    "id": "3763255024",
+    "name": [
+      "Duca degli Abruzzi",
+      "阿布魯齊公爵"
+    ],
+    "tier": 7,
+    "type": "巡洋艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PISC507.png"
+  },
+  {
+    "id": "4188976336",
+    "name": [
+      "成安"
+    ],
+    "tier": 1,
+    "type": "巡洋艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSC101.png"
+  },
+  {
+    "id": "3764303056",
+    "name": [
+      "Huanghe",
+      "黃河"
+    ],
+    "tier": 6,
+    "type": "巡洋艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSC506.png"
+  },
+  {
+    "id": "4187894992",
+    "name": [
+      "龍江"
+    ],
+    "tier": 2,
+    "type": "驅逐艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSD102.png"
+  },
+  {
+    "id": "4186846416",
+    "name": [
+      "Phra Ruang",
+      "帕鑾"
+    ],
+    "tier": 3,
+    "type": "驅逐艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSD103.png"
+  },
+  {
+    "id": "4185797840",
+    "name": [
+      "瀋陽"
+    ],
+    "tier": 4,
+    "type": "驅逐艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSD104.png"
+  },
+  {
+    "id": "4184749264",
+    "name": [
+      "建威"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSD105.png"
+  },
+  {
+    "id": "4183700688",
+    "name": [
+      "Fushun",
+      "撫順"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSD106.png"
+  },
+  {
+    "id": "3764270288",
+    "name": [
+      "Anshan",
+      "鞍山"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSD506.png"
+  },
+  {
+    "id": "4182652112",
+    "name": [
+      "Gadjah Mada",
+      "加札 馬達"
+    ],
+    "tier": 7,
+    "type": "驅逐艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSD107.png"
+  },
+  {
+    "id": "4181603536",
+    "name": [
+      "咸陽"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSD108.png"
+  },
+  {
+    "id": "3762173136",
+    "name": [
+      "Loyang",
+      "洛陽"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSD508.png"
+  },
+  {
+    "id": "4180554960",
+    "name": [
+      "Chung Mu",
+      "忠武"
+    ],
+    "tier": 9,
+    "type": "驅逐艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSD109.png"
+  },
+  {
+    "id": "4179506384",
+    "name": [
+      "岳陽"
+    ],
+    "tier": 10,
+    "type": "驅逐艦",
+    "nation": "Pan_asia",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PZSD110.png"
+  },
+  {
+    "id": "3769513264",
+    "name": [
+      "Błyskawica",
+      "Blyskawica",
+      "閃電"
+    ],
+    "tier": 7,
+    "type": "驅逐艦",
+    "nation": "Poland",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PWSD501.png"
+  },
+  {
+    "id": "3764303216",
+    "name": [
+      "Perth",
+      "伯斯"
+    ],
+    "tier": 6,
+    "type": "巡洋艦",
+    "nation": "Commonwealth",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PUSC506.png"
+  },
+  {
+    "id": "3767416176",
+    "name": [
+      "Vampire",
+      "吸血鬼"
+    ],
+    "tier": 3,
+    "type": "驅逐艦",
+    "nation": "Commonwealth",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PUSD503.png"
   }
-
 ]
