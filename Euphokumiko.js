@@ -13,7 +13,9 @@ const wows_CLAN_ID_url = "https://api.worldofwarships.asia/wows/clans/accountinf
 const wows_CLAN_ID_TAG_url = "https://api.worldofwarships.asia/wows/clans/list/?application_id="
 const wows_DATA_url = "https://api.worldofwarships.asia/wows/account/info/?application_id=";
 const wows_CLAN_url = "https://api.worldofwarships.asia/wows/clans/info/?application_id=";
-const wows_SHIP_DATA_url = "https://api.worldofwarships.asia/wows/ships/stats/?application_id="
+const wows_SHIP_DATA_url = "https://api.worldofwarships.asia/wows/ships/stats/?application_id=";
+
+const Euphokumiko = "<@305696867084140547>";
 
 client.login(apikey.token);
 
@@ -303,6 +305,12 @@ client.on('message', (message) => {
                     else {
                         error(message.channel);
                     }
+                    break;
+
+                case "help":
+
+                    message.channel.send(Euphokumiko + " @NCTU");
+
                     break;
 
                 default:
