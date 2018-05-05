@@ -119,7 +119,7 @@ client.on('message', (message) => {
     if (message.content.substring(0, 2) == ">>") {
         initilize();
         command = message.content.split('>>')[1];
-        //console.log(command);
+        console.log(command);
         ship = command.split(' ')[2];
         name = command.split(' ')[1];
         command = command.split(' ')[0];
