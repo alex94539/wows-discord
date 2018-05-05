@@ -259,7 +259,7 @@ client.on('message', (message) => {
                                             if (ship.toLowerCase() === shipdata[j].name[z].toLowerCase()) {
                                                 ui = true;
                                                 break;
-                                            } 
+                                            }
                                         }
                                         if (ui) {
                                             index = j;
@@ -297,6 +297,9 @@ client.on('message', (message) => {
                                 else {
                                     ERROR(message.channel);
                                 }
+                            }
+                            else {
+                                ERROR(message.channel);
                             }
                         })
                     }
