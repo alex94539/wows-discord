@@ -1,6 +1,6 @@
 # wows-discord
-wows查水表程式 base on node.js
-將玩家資料傳送到discord
+### wows查水表程式 base on node.js
+### 將玩家資料傳送到discord
 # 使用教學
 ## 指令集：
 ### >>player 玩家暱稱
