@@ -1,25 +1,23 @@
-﻿const discord = require("discord.js");
-const rp = require("request-promise");
-const jsonfile = require("jsonfile");
-const logger = require('winston');
-const apikey = require("./apikey.json");
-const shipdata = require("./shipdata.json");
-const utf8 = require('utf8');
+﻿const discord   = require("discord.js");
+const rp        = require("request-promise");
+const jsonfile  = require("jsonfile");
+const logger    = require('winston');
+const apikey    = require("./apikey.json");
+const shipdata  = require("./shipdata.json");
+const utf8      = require('utf8');
 
 const client = new discord.Client({ autoreconnect: true });
 
-const wows_ID_url = "https://api.worldofwarships.asia/wows/account/list/?search=";
-const wows_CLAN_ID_url = "https://api.worldofwarships.asia/wows/clans/accountinfo/?application_id=";
-const wows_CLAN_ID_TAG_url = "https://api.worldofwarships.asia/wows/clans/list/?application_id="
-const wows_DATA_url = "https://api.worldofwarships.asia/wows/account/info/?application_id=";
-const wows_CLAN_url = "https://api.worldofwarships.asia/wows/clans/info/?application_id=";
-const wows_SHIP_DATA_url = "https://api.worldofwarships.asia/wows/ships/stats/?application_id=";
+const wows_ID_url           = "https://api.worldofwarships.asia/wows/account/list/?search=";
+const wows_CLAN_ID_url      = "https://api.worldofwarships.asia/wows/clans/accountinfo/?application_id=";
+const wows_CLAN_ID_TAG_url  = "https://api.worldofwarships.asia/wows/clans/list/?application_id="
+const wows_DATA_url         = "https://api.worldofwarships.asia/wows/account/info/?application_id=";
+const wows_CLAN_url         = "https://api.worldofwarships.asia/wows/clans/info/?application_id=";
+const wows_SHIP_DATA_url    = "https://api.worldofwarships.asia/wows/ships/stats/?application_id=";
 
 const Euphokumiko = "<@305696867084140547>";
 
 client.login(apikey.token);
-
-//
 
 let command;
 let name, userID, clanID, shipname;
@@ -30,7 +28,15 @@ let flginsd;
 let averagefrag, averageexp;
 let picurl;
 
-function check(a) {
+function initilize() {
+    ship = "";
+    name = "";
+    command = "";
+    userID = "";
+    clanID = "";
+}
+
+function check(a) { // check if is null
     if (a != null) {
         return true;
     }
@@ -39,16 +45,24 @@ function check(a) {
     }
 }
 
-function error(channel) {
+function inputerror(channel) { //wrong input format
     channel.send("輸入格式有誤，回國小重修好嗎?");
 }
 
-function ERROR(channel) {
+function ERROR(channel) { //can't find player or clan
     channel.send("查無此人／公會，請重新輸入");
 }
 
-function sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan) {
-    let temp = new discord.RichEmbed()
+function shiperror(channel) { //can't find this ship
+    channel.send("查無此船，請檢查拼字或使用英文查詢");
+}
+
+function nosuchship(channel) { //no play record
+    channel.send("該玩家沒有此船艦的遊玩紀錄");
+}
+
+function sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, channel) { //send player's data to discord data
+    let embed = new discord.RichEmbed()
         .setTitle("查水表時間！")
         .setThumbnail("https://i.imgur.com/cO8B0P8.jpg")
         .setColor(3447003)
@@ -59,10 +73,10 @@ function sendmessagetodiscord_player(name, userID, wins, battles, averagedamage,
         .addField("公會標籤：",clan)
         .setFooter("松浦　果南")
         .setTimestamp();
-    return temp;
+    channel.send({ embed });
 }
 
-function sendmessagetodiscord_clan(clanname, clanleader, membernum, clan, channel) {
+function sendmessagetodiscord_clan(clanname, clanleader, membernum, clan, channel) { //send clan data to discord channel
     //console.log(clanname + " " + clanleader + " " + membernum + " " + clan);
     let embed = new discord.RichEmbed()
         .setTitle("查水表時間！")
@@ -76,7 +90,7 @@ function sendmessagetodiscord_clan(clanname, clanleader, membernum, clan, channe
     channel.send({ embed });
 }
 
-function sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, channel) {
+function sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, channel) { //send player's ship data to discord channel
     let winrate = ((wins / battles) * 100).toFixed(2);
     let embed = new discord.RichEmbed()
         .setTitle("查水表時間！")
@@ -94,10 +108,6 @@ function sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averag
     channel.send({ embed });
 }
 
-function nosuchship(channel) {
-    channel.send("該玩家沒有此船艦的遊玩紀錄");
-}
-
 client.on('ready', function (evt) {
     client.user.setActivity("我是Euphokumiko老婆喔~~");
     logger.info("Connected");
@@ -106,9 +116,8 @@ client.on('ready', function (evt) {
 })
 
 client.on('message', (message) => {
-    var embed;
-    
     if (message.content.substring(0, 2) == ">>") {
+        initilize();
         command = message.content.split('>>')[1];
         //console.log(command);
         ship = command.split(' ')[2];
@@ -118,7 +127,6 @@ client.on('message', (message) => {
         if (check(command)) {
             switch (command) {
                 case "clan":
-                    //message.channel.send("work in progress....");
                     if (check(name)) {
                         rp(wows_CLAN_ID_TAG_url + apikey.ApiKey + "&search=" + name).then(data => {
                             let temp = JSON.parse(data);
@@ -158,7 +166,7 @@ client.on('message', (message) => {
                         })
                     }
                     else {
-                        error(message.channel);
+                        inputerror(message.channel);
                     }
                     break;
 
@@ -167,7 +175,6 @@ client.on('message', (message) => {
                     if (check(name)) {
                         rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {
                             let temp = JSON.parse(data);
-                            
                             if (temp.data[0] != null) {
                                 flginsd = false;
                                 for (let m = 0; m < temp.data.length; m++) {
@@ -199,14 +206,12 @@ client.on('message', (message) => {
                                                         let tempC = JSON.parse(data);
                                                         if (tempC.data != null) {
                                                             clan = tempC.data[clanID].tag;
-                                                            embed = sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan);
-                                                            message.channel.send({ embed });
+                                                            sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, message.channel);
                                                         }
                                                     })
                                                 }
                                                 else {
-                                                    embed = sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan);
-                                                    message.channel.send({ embed });
+                                                    sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, message.channel);
                                                 }
                                             })
                                         }
@@ -219,19 +224,14 @@ client.on('message', (message) => {
                                 else {
                                     ERROR(message.channel);
                                 }
-
-                                
-                                //
-                                
                             }
                             else {
                                 ERROR(message.channel);
                             }
-
                         })
                     }
                     else {
-                        error(message.channel);
+                        inputerror(message.channel);
                     }
                     break;
 
@@ -239,7 +239,6 @@ client.on('message', (message) => {
                     if (check(ship)) {
                         rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {
                             let temp = JSON.parse(data);
-
                             if (temp.data[0] != null) {
                                 flginsd = false;
                                 for (let m = 0; m < temp.data.length; m++) {
@@ -248,7 +247,7 @@ client.on('message', (message) => {
                                         userID = temp.data[0].account_id;
                                         userID = userID.toString();
                                         flginsd = true;
-                                        console.log(name + " " + userID);
+                                        //console.log(name + " " + userID);
                                         break;
                                     }
                                 }
@@ -278,7 +277,6 @@ client.on('message', (message) => {
                                             //console.log(temp);
                                             //console.log(temp.data[userID][0].pvp.wins);
                                             if (temp.data[userID] != null) {
-
                                                 wins = temp.data[userID][0].pvp.wins;
                                                 losses = temp.data[userID][0].pvp.losses;
                                                 battles = wins + losses
@@ -303,25 +301,21 @@ client.on('message', (message) => {
                         })
                     }
                     else {
-                        error(message.channel);
+                        inputerror(message.channel);
                     }
                     break;
 
                 case "help":
-
                     message.channel.send(Euphokumiko + " @NCTU");
-
                     break;
 
                 default:
-                    let msg = "指令錯誤，請不要亂玩我，謝謝";
-
-                    message.channel.send(msg);
+                    message.channel.send("指令錯誤，請不要亂玩我，謝謝");
                     break;
             }
         }
         else {
-            error(message.channel);
+            inputerror(message.channel);
         }
 
         
