@@ -118,11 +118,11 @@ client.on('ready', function (evt) {
 client.on('message', (message) => {
     if (message.content.substring(0, 2) == ">>") {
         initilize();
-        command = message.content.split('>>')[1];
+        command = message.content;
         console.log(message.guild.name + " " + command);
-        ship = command.split(' ')[2];
-        name = command.split(' ')[1];
-        command = command.split(' ')[0];
+        ship = command.match(/>>(.+?) (.+?) (.+)/)[3];
+        name = command.match(/>>(.+?) (.+?) (.+)/)[2];
+        command = command.match(/>>(.+?) (.+?) (.+)/)[1];
         command = command.toLowerCase();
         if (check(command)) {
             switch (command) {
