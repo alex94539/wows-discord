@@ -118,12 +118,13 @@ client.on('ready', function (evt) {
 client.on('message', (message) => {
     if (message.content.substring(0, 2) == ">>") {
         initilize();
-        command = message.content;
-        console.log(message.guild.name + " " + command);
-        ship = command.match(/>>(.+?) (.+?) (.+)/)[3];
-        name = command.match(/>>(.+?) (.+?) (.+)/)[2];
-        command = command.match(/>>(.+?) (.+?) (.+)/)[1];
+        let msg = message.content;
+        msg = msg.split('>>')[1];
+        console.log(message.guild.name + " " + msg);
+        name = msg.split(' ')[1];
+        command = msg.split(' ')[0];
         command = command.toLowerCase();
+        //console.log(command + " " + name);
         if (check(command)) {
             switch (command) {
                 case "clan":
@@ -236,6 +237,13 @@ client.on('message', (message) => {
                     break;
 
                 case "playership":
+                    if (message.content.split(' ')[2] != null) {
+                        ship = message.content.match(/>>(.+?) (.+?) (.+)/)[3];
+                    }
+                    else {
+                        inputerror(message.channel);
+                        break;
+                    }                    
                     if (check(ship)) {
                         rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {
                             let temp = JSON.parse(data);
