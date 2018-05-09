@@ -57,7 +57,7 @@ function shiperror(channel) { //can't find this ship
     channel.send("查無此船，請檢查拼字或使用英文查詢");
 }
 
-function nosuchship(channel) { //no play record
+function noshiprecord(channel) { //no play record
     channel.send("該玩家沒有此船艦的遊玩紀錄");
 }
 
@@ -294,7 +294,7 @@ client.on('message', (message) => {
                                                 sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, message.channel);
                                             }
                                             else {
-                                                nosuchship(message.channel);
+                                                noshiprecord(message.channel);
                                             }
                                         })
                                     }
