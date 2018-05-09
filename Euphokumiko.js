@@ -10,7 +10,7 @@ const client = new discord.Client({ autoreconnect: true });
 
 const wows_ID_url           = "https://api.worldofwarships.asia/wows/account/list/?search=";
 const wows_CLAN_ID_url      = "https://api.worldofwarships.asia/wows/clans/accountinfo/?application_id=";
-const wows_CLAN_ID_TAG_url  = "https://api.worldofwarships.asia/wows/clans/list/?application_id="
+const wows_CLAN_ID_TAG_url  = "https://api.worldofwarships.asia/wows/clans/list/?application_id=";
 const wows_DATA_url         = "https://api.worldofwarships.asia/wows/account/info/?application_id=";
 const wows_CLAN_url         = "https://api.worldofwarships.asia/wows/clans/info/?application_id=";
 const wows_SHIP_DATA_url    = "https://api.worldofwarships.asia/wows/ships/stats/?application_id=";
@@ -287,7 +287,7 @@ client.on('message', (message) => {
                                             if (temp.data[userID] != null) {
                                                 wins = temp.data[userID][0].pvp.wins;
                                                 losses = temp.data[userID][0].pvp.losses;
-                                                battles = wins + losses
+                                                battles = wins + losses;
                                                 averagedamage = temp.data[userID][0].pvp.damage_dealt / battles;
                                                 averagefrag = temp.data[userID][0].pvp.frags / battles;
                                                 averageexp = temp.data[userID][0].pvp.xp / battles;
@@ -303,7 +303,7 @@ client.on('message', (message) => {
                                     }
                                 }
                                 else {
-                                    ERROR(message.channel);
+                                    shiperror(message.channel);
                                 }
                             }
                             else {
