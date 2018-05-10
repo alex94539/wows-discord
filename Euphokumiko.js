@@ -299,11 +299,11 @@ client.on('message', (message) => {
                                         })
                                     }
                                     else {
-                                        ERROR(message.channel);
+                                        shiperror(message.channel);
                                     }
                                 }
                                 else {
-                                    shiperror(message.channel);
+                                    ERROR(message.channel);
                                 }
                             }
                             else {
