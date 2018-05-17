@@ -299,11 +299,16 @@ client.on('message', (message) => {
                                                 if (temp.data[userID] != null) {
                                                     wins = temp.data[userID][0].pvp.wins;
                                                     losses = temp.data[userID][0].pvp.losses;
-                                                    battles = wins + losses;
-                                                    averagedamage = temp.data[userID][0].pvp.damage_dealt / battles;
-                                                    averagefrag = temp.data[userID][0].pvp.frags / battles;
-                                                    averageexp = temp.data[userID][0].pvp.xp / battles;
-                                                    sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, message.channel);
+                                                    if(wins + losses === 0){
+                                                        battles = wins + losses;
+                                                        averagedamage = temp.data[userID][0].pvp.damage_dealt / battles;
+                                                        averagefrag = temp.data[userID][0].pvp.frags / battles;
+                                                        averageexp = temp.data[userID][0].pvp.xp / battles;
+                                                        sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, message.channel);
+                                                    }
+                                                    else{
+                                                        noshiprecord(message.channel);
+                                                    }
                                                 }
                                                 else {
                                                     noshiprecord(message.channel);
