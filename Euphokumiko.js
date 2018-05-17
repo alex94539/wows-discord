@@ -303,7 +303,7 @@ client.on('message', (message) => {
                                                     wins = temp.data[userID][0].pvp.wins;
                                                     losses = temp.data[userID][0].pvp.losses;
                                                     battles = wins + losses;
-                                                    if(Number(battles) === 0){
+                                                    if(Number(battles) != 0){
                                                         averagedamage = temp.data[userID][0].pvp.damage_dealt / battles;
                                                         averagefrag = temp.data[userID][0].pvp.frags / battles;
                                                         averageexp = temp.data[userID][0].pvp.xp / battles;
