@@ -45,6 +45,9 @@ function check(a) { // check if is null
     }
 }
 
+function nopvprecord(channel){
+    channel.send("該玩家沒有此船艦的隨機戰鬥遊玩紀錄");
+}
 
 function nametooshort(channel){
     channel.send("名稱長度過短 暱稱最短長度為3個字母/符號");
@@ -307,7 +310,7 @@ client.on('message', (message) => {
                                                         sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, message.channel);
                                                     }
                                                     else{
-                                                        noshiprecord(message.channel);
+                                                        nopvprecord(message.channel);
                                                     }
                                                 }
                                                 else {
