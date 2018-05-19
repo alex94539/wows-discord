@@ -128,8 +128,13 @@ client.on('message', (message) => {
         initilize();
         let msg = message.content;
         msg = msg.split('>>')[1];
-        console.log(message);
-        console.log(message.guild.name + " " + msg);
+        //console.log(message);
+        if(message.guild!=undefined){
+            console.log(message.guild.name + " " + msg);
+        }
+        else{
+            console.log("private message " + msg);
+        }
         name = msg.split(' ')[1];
         command = msg.split(' ')[0];
         command = command.toLowerCase();
