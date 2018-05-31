@@ -1125,26 +1125,26 @@
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC044.png"
   },
   {
-    "id": "4287543280",
+    "id": "4078876656",
     "name": [
-      "Cleveland",
-      "克里夫蘭"
+      "Dallas",
+      "達拉斯"
     ],
     "tier": 6,
     "type": "巡洋艦",
     "nation": "USA",
-    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC007.png"
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC206.png"
   },
   {
-    "id": "4282300400",
+    "id": "4183734256",
     "name": [
       "Pensacola",
       "彭薩科拉"
     ],
-    "tier": 7,
+    "tier": 6,
     "type": "巡洋艦",
     "nation": "USA",
-    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC012.png"
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC106.png"
   },
   {
     "id": "4288591856",
@@ -1180,26 +1180,81 @@
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC507.png"
   },
   {
-    "id": "4280203248",
+    "id": "4077828080",
+    "name": [
+      "Helena",
+      "海倫娜"
+    ],
+    "tier": 7,
+    "type": "巡洋艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC207.png"
+  },
+  {
+    "id": "4182685680",
     "name": [
       "New Orleans",
       "紐澳良"
     ],
+    "tier": 7,
+    "type": "巡洋艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC107.png"
+  },
+  {
+    "id": "4182685680",
+    "name": [
+      "Boise",
+      "柏伊斯"
+    ],
+    "tier": 7,
+    "type": "巡洋艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC597.png"
+  },
+  {
+    "id": "4076779504",
+    "name": [
+      "Cleveland",
+      "克里夫蘭"
+    ],
     "tier": 8,
     "type": "巡洋艦",
     "nation": "USA",
-    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC014.png"
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC208.png"
   },
   {
-    "id": "4277057520",
+    "id": "4181637104",
     "name": [
       "Baltimore",
       "巴爾的摩"
     ],
+    "tier": 8,
+    "type": "巡洋艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC108.png"
+  },
+  {
+    "id": "4180588528",
+    "name": [
+      "Buffalo",
+      "水牛城"
+    ],
     "tier": 9,
     "type": "巡洋艦",
     "nation": "USA",
-    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC017.png"
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC109.png"
+  },
+  {
+    "id": "4075730928",
+    "name": [
+      "Seattle",
+      "西雅圖"
+    ],
+    "tier": 9,
+    "type": "巡洋艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC209.png"
   },
   {
     "id": "4273911792",
@@ -1222,6 +1277,17 @@
     "type": "巡洋艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC710.png"
+  },
+  {
+    "id": "4074682352",
+    "name": [
+      "Worcester",
+      "伍斯特"
+    ],
+    "tier": 10,
+    "type": "巡洋艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC210.png"
   },
   {
     "id": "3768465392",
@@ -1670,6 +1736,8 @@
   {
     "id": "4187895600",
     "name": [
+      "V 25",
+      "V25",
       "V-25"
     ],
     "tier": 2,
@@ -1680,6 +1748,8 @@
   {
     "id": "4186847024",
     "name": [
+      "G101",
+      "G 101",
       "G-101"
     ],
     "tier": 3,
@@ -1690,6 +1760,8 @@
   {
     "id": "4185798448",
     "name": [
+      "V170",
+      "V 170",
       "V-170"
     ],
     "tier": 4,
@@ -1700,6 +1772,8 @@
   {
     "id": "4184749872",
     "name": [
+      "T22",
+      "T 22",
       "T-22"
     ],
     "tier": 5,
@@ -1722,6 +1796,8 @@
   {
     "id": "3764270896",
     "name": [
+      "T61",
+      "T 61",
       "T-61"
     ],
     "tier": 6,
@@ -1744,6 +1820,8 @@
   {
     "id": "3762173744",
     "name": [
+      "Z39",
+      "Z 39",
       "Z-39"
     ],
     "tier": 7,
@@ -1754,6 +1832,8 @@
   {
     "id": "4181604144",
     "name": [
+      "Z23",
+      "Z 23",
       "Z-23"
     ],
     "tier": 8,
@@ -1764,6 +1844,8 @@
   {
     "id": "4180555568",
     "name": [
+      "Z46",
+      "Z 46",
       "Z-46"
     ],
     "tier": 9,
@@ -1774,6 +1856,8 @@
   {
     "id": "4179506992",
     "name": [
+      "Z52",
+      "Z 52",
       "Z-52"
     ],
     "tier": 10,
