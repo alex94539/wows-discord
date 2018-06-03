@@ -142,6 +142,7 @@ client.on('message', (message) => {
         if (check(command)) {
             switch (command) {
                 case "clan":
+                case "1":
                     if (check(name)) {
                         rp(wows_CLAN_ID_TAG_url + apikey.ApiKey + "&search=" + name).then(data => {
                             let temp = JSON.parse(data);
@@ -186,6 +187,7 @@ client.on('message', (message) => {
                     break;
 
                 case "player":
+                case "2":
                     clan = "無公會";
                     if (check(name)) {
                         if(name.length > 2){
@@ -256,6 +258,7 @@ client.on('message', (message) => {
                     break;
 
                 case "playership":
+                case "3":
                     if (message.content.split(' ')[2] != null) {
                         ship = message.content.match(/>>(.+?) (.+?) (.+)/)[3];
                     }
