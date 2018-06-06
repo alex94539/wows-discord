@@ -165,7 +165,7 @@ function _playership(message){
     }
     else {
         inputerror(message.channel);
-        break;
+        return;
     }                    
     if (check(ship)) {
         if(name.length > 2){
@@ -366,6 +366,8 @@ client.on('message', (message) => {
 
                 case "noob":
                     message.channel.send("<@" + message.author.id + ">" + "智障Ｂ嘴");
+                    break;
+
                 default:
                     message.channel.send("指令錯誤，請不要亂玩我，謝謝");
                     break;
