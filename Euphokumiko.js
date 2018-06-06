@@ -1,10 +1,10 @@
-﻿const discord   = require("discord.js");
+const discord   = require("discord.js");
 const rp        = require("request-promise");
 const jsonfile  = require("jsonfile");
-const logger    = require('winston');
+const logger    = require("winston");
 const apikey    = require("./apikey.json");
 const shipdata  = require("./shipdata.json");
-const utf8      = require('utf8');
+const utf8      = require("utf8");
 
 const client = new discord.Client({ autoreconnect: true });
 
