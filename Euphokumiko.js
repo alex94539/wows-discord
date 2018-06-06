@@ -45,7 +45,7 @@ function check(a) { // check if is null
     }
 }
 
-function clan(message){
+function _clan(message){
     if (check(name)) {
         rp(wows_CLAN_ID_TAG_url + apikey.ApiKey + "&search=" + name).then(data => {
             let temp = JSON.parse(data);
@@ -89,7 +89,7 @@ function clan(message){
     }
 }
 
-function player(message){
+function _player(message){
     clan = "無公會";
     if (check(name)) {
         if(name.length > 2){
@@ -159,7 +159,7 @@ function player(message){
     }
 }
 
-function playership(message){
+function _playership(message){
     if (message.content.split(' ')[2] != null) {
         ship = message.content.match(/>>(.+?) (.+?) (.+)/)[3];
     }
@@ -347,17 +347,17 @@ client.on('message', (message) => {
             switch (command) {
                 case "clan":
                 case "1":
-                    clan(message);
+                    _clan(message);
                     break;
 
                 case "player":
                 case "2":
-                    player(message);
+                    _player(message);
                     break;
 
                 case "playership":
                 case "3":
-                    playership(message);
+                    _playership(message);
                     break;
 
                 case "help":
