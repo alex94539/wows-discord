@@ -45,6 +45,210 @@ function check(a) { // check if is null
     }
 }
 
+function clan(message){
+    if (check(name)) {
+        rp(wows_CLAN_ID_TAG_url + apikey.ApiKey + "&search=" + name).then(data => {
+            let temp = JSON.parse(data);
+            name = name.toUpperCase();
+            //console.log(wows_CLAN_ID_TAG_url + apikey.ApiKey + "&search=" + name);
+            if (temp.data[0] != null) {
+                let flag = false, flagnum;
+                //console.log(temp.data.length);
+                for (let y = 0; y < temp.data.length; y++) {
+                    //console.log(temp.data[y].tag);
+                    if (temp.data[y].tag === name) {
+                        flag = true;
+                        flagnum = y;
+                        clanID = temp.data[y].clan_id;
+                        break;
+                    }
+                }
+                if (flag) {
+                    rp(wows_CLAN_url + apikey.ApiKey + "&clan_id=" + clanID).then(data => {
+                        //console.log(wows_CLAN_url + apikey.ApiKey + "&clan_id=" + clanID);
+                        let tempA = JSON.parse(data);
+                        clanname = tempA.data[clanID].name;
+                        //console.log(clanname);
+                        clanleader = tempA.data[clanID].leader_name;
+                        membernum = tempA.data[clanID].members_count;
+                        clan = tempA.data[clanID].tag;
+                        sendmessagetodiscord_clan(clanname, clanleader, membernum, clan, message.channel);
+                    })
+                }
+                else {
+                    ERROR(message.channel);
+                }
+            }
+            else {
+                ERROR(message.channel);
+            }
+        })
+    }
+    else {
+        inputerror(message.channel);
+    }
+}
+
+function player(message){
+    clan = "無公會";
+    if (check(name)) {
+        if(name.length > 2){
+            rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {
+                let temp = JSON.parse(data);
+                if (temp.data[0] != null) {
+                    flginsd = false;
+                    for (let m = 0; m < temp.data.length; m++) {
+                        if (temp.data[m].nickname.toLowerCase() == name.toLowerCase()) {
+                            name = temp.data[0].nickname;
+                            userID = temp.data[0].account_id;
+                            userID = userID.toString();
+                            flginsd = true;
+                            break;
+                        }
+                    }
+                    if (flginsd) {
+                        rp(wows_DATA_url + apikey.ApiKey + "&account_id=" + userID).then(data => {
+                            let tempA = JSON.parse(data);
+                            if ((tempA.status == "ok") && (tempA.data[userID]!=null)) {
+                                //
+                                wins = tempA.data[userID].statistics.pvp.wins;
+                                losses = tempA.data[userID].statistics.pvp.losses;
+                                battles = wins + losses;
+                                averagedamage = (tempA.data[userID].statistics.pvp.damage_dealt / battles).toFixed(0);
+                                winrate = ((wins / battles) * 100).toFixed(2);
+                                //
+                                //
+                                rp(wows_CLAN_ID_url + apikey.ApiKey + "&account_id=" + userID).then(data => {
+                                    let tempB = JSON.parse(data);
+                                    if ((tempB.data[userID] != null) && (tempB.status == "ok") && (tempB.data[userID].clan_id != null)) {
+                                        clanID = tempB.data[userID].clan_id;
+                                        rp(wows_CLAN_url + apikey.ApiKey + "&clan_id=" + clanID).then(data => {
+                                            let tempC = JSON.parse(data);
+                                            if (tempC.data != null) {
+                                                clan = tempC.data[clanID].tag;
+                                                sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, message.channel);
+                                            }
+                                        })
+                                    }
+                                    else {
+                                        sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, message.channel);
+                                    }
+                                })
+                            }
+                            else {
+                                ERROR(message.channel);
+                            }
+
+                        })
+                    }
+                    else {
+                        ERROR(message.channel);
+                    }
+                }
+                else {
+                    ERROR(message.channel);
+                }
+            })
+        }
+        else{
+            nametooshort(message.channel);
+        }
+    }
+    else {
+        inputerror(message.channel);
+    }
+}
+
+function playership(message){
+    if (message.content.split(' ')[2] != null) {
+        ship = message.content.match(/>>(.+?) (.+?) (.+)/)[3];
+    }
+    else {
+        inputerror(message.channel);
+        break;
+    }                    
+    if (check(ship)) {
+        if(name.length > 2){
+            rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {
+                let temp = JSON.parse(data);
+                if (temp.data[0] != null) {
+                    flginsd = false;
+                    for (let m = 0; m < temp.data.length; m++) {
+                        if (temp.data[m].nickname.toLowerCase() == name.toLowerCase()) {
+                            name = temp.data[0].nickname;
+                            userID = temp.data[0].account_id;
+                            userID = userID.toString();
+                            flginsd = true;
+                            //console.log(name + " " + userID);
+                            break;
+                        }
+                    }
+                    if (flginsd) {
+                        let ui = false;
+                        let index, ship_id;
+                        for (let j = 0; j < shipdata.length; j++) {
+                            for (let z = 0; z < shipdata[j].name.length; z++) {
+                                if (ship.toLowerCase() === shipdata[j].name[z].toLowerCase()) {
+                                    ui = true;
+                                    break;
+                                }
+                            }
+                            if (ui) {
+                                index = j;
+                                picurl = shipdata[index].picurl;
+                                break;
+                            }
+                        }
+                        if (ui) {
+                            shipname = shipdata[index].name[shipdata[index].name.length - 1];
+                            ship_id = shipdata[index].id;
+                            //console.log(index + " " + shipname + " " + ship_id);
+                            //console.log(wows_SHIP_DATA_url + apikey.ApiKey + "&ship_id=" + ship_id + "&account_id=" + userID);
+                            rp(wows_SHIP_DATA_url + apikey.ApiKey + "&ship_id=" + ship_id + "&account_id=" + userID).then(data => {
+                                let temp = JSON.parse(data);
+                                //console.log(temp);
+                                //console.log(temp.data[userID][0].pvp.wins);
+                                if (temp.data[userID] != null) {
+                                    wins = temp.data[userID][0].pvp.wins;
+                                    losses = temp.data[userID][0].pvp.losses;
+                                    battles = wins + losses;
+                                    if(Number(battles) != 0){
+                                        averagedamage = temp.data[userID][0].pvp.damage_dealt / battles;
+                                        averagefrag = temp.data[userID][0].pvp.frags / battles;
+                                        averageexp = temp.data[userID][0].pvp.xp / battles;
+                                        sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, message.channel);
+                                    }
+                                    else{
+                                        nopvprecord(message.channel);
+                                    }
+                                }
+                                else {
+                                    noshiprecord(message.channel);
+                                }
+                            })
+                        }
+                        else {
+                            shiperror(message.channel);
+                        }
+                    }
+                    else {
+                        ERROR(message.channel);
+                    }
+                }
+                else {
+                    ERROR(message.channel);
+                }
+            })
+        }
+        else{
+            nametooshort(message.channel);
+        }
+    }
+    else {
+        inputerror(message.channel);
+    }
+}
+
 function nopvprecord(channel){
     channel.send("該玩家沒有此船艦的隨機戰鬥遊玩紀錄");
 }
@@ -143,215 +347,25 @@ client.on('message', (message) => {
             switch (command) {
                 case "clan":
                 case "1":
-                    if (check(name)) {
-                        rp(wows_CLAN_ID_TAG_url + apikey.ApiKey + "&search=" + name).then(data => {
-                            let temp = JSON.parse(data);
-                            name = name.toUpperCase();
-                            //console.log(wows_CLAN_ID_TAG_url + apikey.ApiKey + "&search=" + name);
-                            if (temp.data[0] != null) {
-                                let flag = false, flagnum;
-                                //console.log(temp.data.length);
-                                for (let y = 0; y < temp.data.length; y++) {
-                                    //console.log(temp.data[y].tag);
-                                    if (temp.data[y].tag === name) {
-                                        flag = true;
-                                        flagnum = y;
-                                        clanID = temp.data[y].clan_id;
-                                        break;
-                                    }
-                                }
-                                if (flag) {
-                                    rp(wows_CLAN_url + apikey.ApiKey + "&clan_id=" + clanID).then(data => {
-                                        //console.log(wows_CLAN_url + apikey.ApiKey + "&clan_id=" + clanID);
-                                        let tempA = JSON.parse(data);
-                                        clanname = tempA.data[clanID].name;
-                                        //console.log(clanname);
-                                        clanleader = tempA.data[clanID].leader_name;
-                                        membernum = tempA.data[clanID].members_count;
-                                        clan = tempA.data[clanID].tag;
-                                        sendmessagetodiscord_clan(clanname, clanleader, membernum, clan, message.channel);
-                                    })
-                                }
-                                else {
-                                    ERROR(message.channel);
-                                }
-                            }
-                            else {
-                                ERROR(message.channel);
-                            }
-                        })
-                    }
-                    else {
-                        inputerror(message.channel);
-                    }
+                    clan(message);
                     break;
 
                 case "player":
                 case "2":
-                    clan = "無公會";
-                    if (check(name)) {
-                        if(name.length > 2){
-                            rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {
-                                let temp = JSON.parse(data);
-                                if (temp.data[0] != null) {
-                                    flginsd = false;
-                                    for (let m = 0; m < temp.data.length; m++) {
-                                        if (temp.data[m].nickname.toLowerCase() == name.toLowerCase()) {
-                                            name = temp.data[0].nickname;
-                                            userID = temp.data[0].account_id;
-                                            userID = userID.toString();
-                                            flginsd = true;
-                                            break;
-                                        }
-                                    }
-                                    if (flginsd) {
-                                        rp(wows_DATA_url + apikey.ApiKey + "&account_id=" + userID).then(data => {
-                                            let tempA = JSON.parse(data);
-                                            if ((tempA.status == "ok") && (tempA.data[userID]!=null)) {
-                                                //
-                                                wins = tempA.data[userID].statistics.pvp.wins;
-                                                losses = tempA.data[userID].statistics.pvp.losses;
-                                                battles = wins + losses;
-                                                averagedamage = (tempA.data[userID].statistics.pvp.damage_dealt / battles).toFixed(0);
-                                                winrate = ((wins / battles) * 100).toFixed(2);
-                                                //
-                                                //
-                                                rp(wows_CLAN_ID_url + apikey.ApiKey + "&account_id=" + userID).then(data => {
-                                                    let tempB = JSON.parse(data);
-                                                    if ((tempB.data[userID] != null) && (tempB.status == "ok") && (tempB.data[userID].clan_id != null)) {
-                                                        clanID = tempB.data[userID].clan_id;
-                                                        rp(wows_CLAN_url + apikey.ApiKey + "&clan_id=" + clanID).then(data => {
-                                                            let tempC = JSON.parse(data);
-                                                            if (tempC.data != null) {
-                                                                clan = tempC.data[clanID].tag;
-                                                                sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, message.channel);
-                                                            }
-                                                        })
-                                                    }
-                                                    else {
-                                                        sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, message.channel);
-                                                    }
-                                                })
-                                            }
-                                            else {
-                                                ERROR(message.channel);
-                                            }
-    
-                                        })
-                                    }
-                                    else {
-                                        ERROR(message.channel);
-                                    }
-                                }
-                                else {
-                                    ERROR(message.channel);
-                                }
-                            })
-                        }
-                        else{
-                            nametooshort(message.channel);
-                        }
-                    }
-                    else {
-                        inputerror(message.channel);
-                    }
+                    player(message);
                     break;
 
                 case "playership":
                 case "3":
-                    if (message.content.split(' ')[2] != null) {
-                        ship = message.content.match(/>>(.+?) (.+?) (.+)/)[3];
-                    }
-                    else {
-                        inputerror(message.channel);
-                        break;
-                    }                    
-                    if (check(ship)) {
-                        if(name.length > 2){
-                            rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {
-                                let temp = JSON.parse(data);
-                                if (temp.data[0] != null) {
-                                    flginsd = false;
-                                    for (let m = 0; m < temp.data.length; m++) {
-                                        if (temp.data[m].nickname.toLowerCase() == name.toLowerCase()) {
-                                            name = temp.data[0].nickname;
-                                            userID = temp.data[0].account_id;
-                                            userID = userID.toString();
-                                            flginsd = true;
-                                            //console.log(name + " " + userID);
-                                            break;
-                                        }
-                                    }
-                                    if (flginsd) {
-                                        let ui = false;
-                                        let index, ship_id;
-                                        for (let j = 0; j < shipdata.length; j++) {
-                                            for (let z = 0; z < shipdata[j].name.length; z++) {
-                                                if (ship.toLowerCase() === shipdata[j].name[z].toLowerCase()) {
-                                                    ui = true;
-                                                    break;
-                                                }
-                                            }
-                                            if (ui) {
-                                                index = j;
-                                                picurl = shipdata[index].picurl;
-                                                break;
-                                            }
-                                        }
-                                        if (ui) {
-                                            shipname = shipdata[index].name[shipdata[index].name.length - 1];
-                                            ship_id = shipdata[index].id;
-                                            //console.log(index + " " + shipname + " " + ship_id);
-                                            //console.log(wows_SHIP_DATA_url + apikey.ApiKey + "&ship_id=" + ship_id + "&account_id=" + userID);
-                                            rp(wows_SHIP_DATA_url + apikey.ApiKey + "&ship_id=" + ship_id + "&account_id=" + userID).then(data => {
-                                                let temp = JSON.parse(data);
-                                                //console.log(temp);
-                                                //console.log(temp.data[userID][0].pvp.wins);
-                                                if (temp.data[userID] != null) {
-                                                    wins = temp.data[userID][0].pvp.wins;
-                                                    losses = temp.data[userID][0].pvp.losses;
-                                                    battles = wins + losses;
-                                                    if(Number(battles) != 0){
-                                                        averagedamage = temp.data[userID][0].pvp.damage_dealt / battles;
-                                                        averagefrag = temp.data[userID][0].pvp.frags / battles;
-                                                        averageexp = temp.data[userID][0].pvp.xp / battles;
-                                                        sendmessagetodiscord_ship(shipname, name, userID, wins, battles, averagedamage, averageexp, picurl, message.channel);
-                                                    }
-                                                    else{
-                                                        nopvprecord(message.channel);
-                                                    }
-                                                }
-                                                else {
-                                                    noshiprecord(message.channel);
-                                                }
-                                            })
-                                        }
-                                        else {
-                                            shiperror(message.channel);
-                                        }
-                                    }
-                                    else {
-                                        ERROR(message.channel);
-                                    }
-                                }
-                                else {
-                                    ERROR(message.channel);
-                                }
-                            })
-                        }
-                        else{
-                            nametooshort(message.channel);
-                        }
-                    }
-                    else {
-                        inputerror(message.channel);
-                    }
+                    playership(message);
                     break;
 
                 case "help":
                     message.channel.send(Euphokumiko + " @NCTU");
                     break;
 
+                case "noob":
+                    message.channel.send("<@" + message.author.id + ">" + "智障Ｂ嘴");
                 default:
                     message.channel.send("指令錯誤，請不要亂玩我，謝謝");
                     break;
