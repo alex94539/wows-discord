@@ -1,10 +1,8 @@
 const discord   = require("discord.js");
 const rp        = require("request-promise");
-const jsonfile  = require("jsonfile");
 const logger    = require("winston");
 const apikey    = require("./apikey.json");
 const shipdata  = require("./shipdata.json");
-const utf8      = require("utf8");
 
 const client = new discord.Client({ autoreconnect: true });
 
@@ -95,12 +93,12 @@ function _player(message){
         if(name.length > 2){
             rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {
                 let temp = JSON.parse(data);
-                if (temp.data[0] != null) {
+                if (temp.data.length != 0) {
                     flginsd = false;
                     for (let m = 0; m < temp.data.length; m++) {
                         if (temp.data[m].nickname.toLowerCase() == name.toLowerCase()) {
-                            name = temp.data[0].nickname;
-                            userID = temp.data[0].account_id;
+                            name = temp.data[m].nickname;
+                            userID = temp.data[m].account_id;
                             userID = userID.toString();
                             flginsd = true;
                             break;
@@ -111,29 +109,34 @@ function _player(message){
                             let tempA = JSON.parse(data);
                             if ((tempA.status == "ok") && (tempA.data[userID]!=null)) {
                                 //
-                                wins = tempA.data[userID].statistics.pvp.wins;
-                                losses = tempA.data[userID].statistics.pvp.losses;
-                                battles = wins + losses;
-                                averagedamage = (tempA.data[userID].statistics.pvp.damage_dealt / battles).toFixed(0);
-                                winrate = ((wins / battles) * 100).toFixed(2);
-                                //
-                                //
-                                rp(wows_CLAN_ID_url + apikey.ApiKey + "&account_id=" + userID).then(data => {
-                                    let tempB = JSON.parse(data);
-                                    if ((tempB.data[userID] != null) && (tempB.status == "ok") && (tempB.data[userID].clan_id != null)) {
-                                        clanID = tempB.data[userID].clan_id;
-                                        rp(wows_CLAN_url + apikey.ApiKey + "&clan_id=" + clanID).then(data => {
-                                            let tempC = JSON.parse(data);
-                                            if (tempC.data != null) {
-                                                clan = tempC.data[clanID].tag;
-                                                sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, message.channel);
-                                            }
-                                        })
-                                    }
-                                    else {
+                                if(temp.meta.hidden[0]!=null){
+                                    wins = tempA.data[userID].statistics.pvp.wins;
+                                    losses = tempA.data[userID].statistics.pvp.losses;
+                                    battles = wins + losses;
+                                    averagedamage = (tempA.data[userID].statistics.pvp.damage_dealt / battles).toFixed(0);
+                                    winrate = ((wins / battles) * 100).toFixed(2);
+                                    //
+                                    //
+                                    rp(wows_CLAN_ID_url + apikey.ApiKey + "&account_id=" + userID).then(data => {
+                                        let tempB = JSON.parse(data);
+                                        if ((tempB.data[userID] != null) && (tempB.status == "ok") && (tempB.data[userID].clan_id != null)) {
+                                            clanID = tempB.data[userID].clan_id;
+                                            rp(wows_CLAN_url + apikey.ApiKey + "&clan_id=" + clanID).then(data => {
+                                                let tempC = JSON.parse(data);
+                                                if (tempC.data != null) {
+                                                    clan = tempC.data[clanID].tag;
+                                                    sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, message.channel);
+                                                }
+                                            })
+                                        }
+                                        else {
                                         sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, message.channel);
-                                    }
-                                })
+                                        }
+                                    })
+                                }
+                                else{
+                                    Locked(message.channel);
+                                }
                             }
                             else {
                                 ERROR(message.channel);
@@ -271,6 +274,10 @@ function shiperror(channel) { //can't find this ship
 
 function noshiprecord(channel) { //no play record
     channel.send("該玩家沒有此船艦的遊玩紀錄");
+}
+
+function Locked(channel){//data locked
+    channel.send("該玩家資料不公開")
 }
 
 function sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, channel) { //send player's data to discord data
