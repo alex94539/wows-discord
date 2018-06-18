@@ -109,7 +109,7 @@ function _player(message){
                             let tempA = JSON.parse(data);
                             if ((tempA.status == "ok") && (tempA.data[userID]!=null)) {
                                 //
-                                if(temp.meta.hidden[0]!=null){
+                                if(tempA.meta.hidden==null){
                                     wins = tempA.data[userID].statistics.pvp.wins;
                                     losses = tempA.data[userID].statistics.pvp.losses;
                                     battles = wins + losses;
@@ -178,8 +178,8 @@ function _playership(message){
                     flginsd = false;
                     for (let m = 0; m < temp.data.length; m++) {
                         if (temp.data[m].nickname.toLowerCase() == name.toLowerCase()) {
-                            name = temp.data[0].nickname;
-                            userID = temp.data[0].account_id;
+                            name = temp.data[m].nickname;
+                            userID = temp.data[m].account_id;
                             userID = userID.toString();
                             flginsd = true;
                             //console.log(name + " " + userID);
