@@ -43,25 +43,25 @@ function check(a) { // check if is null
     }
 }
 
-function _clan(message){
+function _clan(message){//以公會標籤查詢公會資訊
     if (check(name)) {
-        rp(wows_CLAN_ID_TAG_url + apikey.ApiKey + "&search=" + name).then(data => {
+        rp(wows_CLAN_ID_TAG_url + apikey.ApiKey + "&search=" + name).then(data => {//以標籤查詢公會ID
             let temp = JSON.parse(data);
             name = name.toUpperCase();
             //console.log(wows_CLAN_ID_TAG_url + apikey.ApiKey + "&search=" + name);
-            if (temp.data[0] != null) {
+            if (temp.data[0] != null) {//若回應不為空，則代表有查詢到
                 let flag = false, flagnum;
                 //console.log(temp.data.length);
-                for (let y = 0; y < temp.data.length; y++) {
+                for (let y = 0; y < temp.data.length; y++) {//尋找標籤完全符合的公會，抓取其ID
                     //console.log(temp.data[y].tag);
                     if (temp.data[y].tag === name) {
-                        flag = true;
+                        flag = true;//若有完全相符的就抓取其index，並標記有查詢到
                         flagnum = y;
                         clanID = temp.data[y].clan_id;
                         break;
                     }
                 }
-                if (flag) {
+                if (flag) {//是否有完全相符的公會TAG
                     rp(wows_CLAN_url + apikey.ApiKey + "&clan_id=" + clanID).then(data => {
                         //console.log(wows_CLAN_url + apikey.ApiKey + "&clan_id=" + clanID);
                         let tempA = JSON.parse(data);
@@ -87,37 +87,37 @@ function _clan(message){
     }
 }
 
-function _player(message){
+function _player(message){//以玩家暱稱查詢玩家戰績
     clan = "無公會";
-    if (check(name)) {
-        if(name.length > 2){
-            rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {
+    if (check(name)) {//檢查輸入是否有錯誤
+        if(name.length > 2){//檢查輸入是否過短
+            rp(wows_ID_url + name + "&application_id=" + apikey.ApiKey).then(data => {//以玩家暱稱查詢其ID
                 let temp = JSON.parse(data);
-                if (temp.data.length != 0) {
+                if (temp.data.length != 0) {//檢查回傳值是否為空
                     flginsd = false;
-                    for (let m = 0; m < temp.data.length; m++) {
-                        if (temp.data[m].nickname.toLowerCase() == name.toLowerCase()) {
+                    for (let m = 0; m < temp.data.length; m++) {//尋找完全符合的項目
+                        if (temp.data[m].nickname.toLowerCase() == name.toLowerCase()) {//統一轉換為小寫以比對之
                             name = temp.data[m].nickname;
                             userID = temp.data[m].account_id;
                             userID = userID.toString();
-                            flginsd = true;
+                            flginsd = true;//是否有找到完全相符的項目
                             break;
                         }
                     }
-                    if (flginsd) {
-                        rp(wows_DATA_url + apikey.ApiKey + "&account_id=" + userID).then(data => {
+                    if (flginsd) {//是否有找到完全相符的項目
+                        rp(wows_DATA_url + apikey.ApiKey + "&account_id=" + userID).then(data => {//以前次查詢到的玩家ID抓取其資料
                             let tempA = JSON.parse(data);
-                            if ((tempA.status == "ok") && (tempA.data[userID]!=null)) {
+                            if ((tempA.status == "ok") && (tempA.data[userID]!=null)) {//檢查回傳資料是否為空
                                 //
                                 if(tempA.meta.hidden==null){
-                                    wins = tempA.data[userID].statistics.pvp.wins;
-                                    losses = tempA.data[userID].statistics.pvp.losses;
-                                    battles = wins + losses;
-                                    averagedamage = (tempA.data[userID].statistics.pvp.damage_dealt / battles).toFixed(0);
-                                    winrate = ((wins / battles) * 100).toFixed(2);
+                                    wins = tempA.data[userID].statistics.pvp.wins;//勝場場數
+                                    losses = tempA.data[userID].statistics.pvp.losses;//敗場場數
+                                    battles = wins + losses;//總戰鬥場數
+                                    averagedamage = (tempA.data[userID].statistics.pvp.damage_dealt / battles).toFixed(0);//計算場均傷害
+                                    winrate = ((wins / battles) * 100).toFixed(2);//計算勝率到小數點以下第二位
                                     //
                                     //
-                                    rp(wows_CLAN_ID_url + apikey.ApiKey + "&account_id=" + userID).then(data => {
+                                    rp(wows_CLAN_ID_url + apikey.ApiKey + "&account_id=" + userID).then(data => {//以玩家ID查詢其所屬公會
                                         let tempB = JSON.parse(data);
                                         if ((tempB.data[userID] != null) && (tempB.status == "ok") && (tempB.data[userID].clan_id != null)) {
                                             clanID = tempB.data[userID].clan_id;
@@ -130,7 +130,7 @@ function _player(message){
                                             })
                                         }
                                         else {
-                                        sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, message.channel);
+                                            sendmessagetodiscord_player(name, userID, wins, battles, averagedamage, winrate, clan, message.channel);
                                         }
                                     })
                                 }
@@ -335,7 +335,7 @@ client.on('ready', function (evt) {
 })
 
 client.on('message', (message) => {
-    if (message.content.substring(0, 2) == ">>") {
+    if (message.content.substring(0, 2) == ">>") {//對以 ">>" 開頭的訊息做回覆
         initilize();
         let msg = message.content;
         msg = msg.split('>>')[1];
