@@ -1444,12 +1444,23 @@
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASD013.png"
   },
   {
+    "id": "3763254608",
+    "name": [
+      "Nueve de Julio",
+      "七月九日"
+    ],
+    "tier": 7,
+    "type": "巡洋艦",
+    "nation": "pan_america",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PVSC507.png"
+  },
+  {
     "id": "3762272048",
     "name": [
       "Graf Zeppelin",
       "齊柏林"
     ],
-    "tier": "8",
+    "tier": 8,
     "type": "航空母艦",
     "nation": "Germany",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSA508.png"
