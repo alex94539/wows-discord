@@ -759,6 +759,17 @@
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD209.png"
   },
   {
+    "id": "4065212112",
+    "name": [
+      "Kitakaze",
+      "北風"
+    ],
+    "tier": 9,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-ru-static.gcdn.co/icons/wows/current/vehicle/large/PJSD219.png"
+  },
+  {
     "id": "4282267344",
     "name": [
       "Shimakaze",
@@ -768,6 +779,17 @@
     "type": "驅逐艦",
     "nation": "Japan",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD012.png"
+  },
+  {
+    "id": "4074649296",
+    "name": [
+      "Harugumo",
+      "春雲"
+    ],
+    "tier": 10,
+    "type": "驅逐艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-ru-static.gcdn.co/icons/wows/current/vehicle/large/PJSD210.png"
   },
   {
     "id": "4290754544",
