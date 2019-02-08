@@ -2,8 +2,8 @@
   {
     "id": "4292851408",
     "name": [
-      "Hosho",
-      "鳳翔"
+      "Hosho_OLD",
+      "鳳翔_OLD"
     ],
     "tier": 4,
     "type": "航空母艦",
@@ -13,8 +13,8 @@
   {
     "id": "4288657104",
     "name": [
-      "Zuiho",
-      "瑞鳳"
+      "Zuiho_OLD",
+      "瑞鳳_OLD"
     ],
     "tier": 5,
     "type": "航空母艦",
@@ -24,8 +24,8 @@
   {
     "id": "4285511376",
     "name": [
-      "Ryujo",
-      "龍驤"
+      "Ryujo_OLD",
+      "龍驤_OLD"
     ],
     "tier": 6,
     "type": "航空母艦",
@@ -35,8 +35,8 @@
   {
     "id": "4283414224",
     "name": [
-      "Hiryu",
-      "飛龍"
+      "Hiryu_OLD",
+      "飛龍_OLD"
     ],
     "tier": 7,
     "type": "航空母艦",
@@ -46,8 +46,8 @@
   {
     "id": "3763320528",
     "name": [
-      "Kaga",
-      "加賀"
+      "Kaga_OLD",
+      "加賀_OLD"
     ],
     "tier": 7,
     "type": "航空母艦",
@@ -57,9 +57,9 @@
   {
     "id": "4282365648",
     "name": [
-      "Shokaku",
-      "Shoukaku",
-      "翔鶴"
+      "Shokaku_OLD",
+      "Shoukaku_OLD",
+      "翔鶴_OLD"
     ],
     "tier": 8,
     "type": "航空母艦",
@@ -69,8 +69,8 @@
   {
     "id": "4279219920",
     "name": [
-      "Taiho",
-      "大鳳"
+      "Taiho_OLD",
+      "大鳳_OLD"
     ],
     "tier": 9,
     "type": "航空母艦",
@@ -80,13 +80,69 @@
   {
     "id": "4277122768",
     "name": [
+      "Hakuryu_OLD",
+      "白龍_OLD"
+    ],
+    "tier": 10,
+    "type": "航空母艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSA017.png"
+  },
+  {
+    "id": "4185896656",
+    "name": [
+      "Hosho",
+      "鳳翔"
+    ],
+    "tier": 4,
+    "type": "航空母艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSA104.png"
+  },
+  {
+    "id": "4183799504",
+    "name": [
+      "Ryujo",
+      "龍驤"
+    ],
+    "tier": 6,
+    "type": "航空母艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSA106.png"
+  },
+  {
+    "id": "3751786192",
+    "name": [
+      "Kaga",
+      "加賀"
+    ],
+    "tier": 8,
+    "type": "航空母艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSA518.png"
+  },
+  {
+    "id": "4181702352",
+    "name": [
+      "Shokaku",
+      "Shoukaku",
+      "翔鶴"
+    ],
+    "tier": 8,
+    "type": "航空母艦",
+    "nation": "Japan",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSA108.png"
+  },
+  {
+    "id": "4179605200",
+    "name": [
       "Hakuryu",
       "白龍"
     ],
     "tier": 10,
     "type": "航空母艦",
     "nation": "Japan",
-    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSA017.png"
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSA110.png"
   },
   {
     "id": "4283381456",
@@ -794,10 +850,10 @@
   {
     "id": "4290754544",
     "name": [
-      "Langley",
-      "蘭利"
+      "Langley_OLD",
+      "蘭利_OLD"
     ],
-    "tier": "4",
+    "tier": 4,
     "type": "航空母艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA004.png"
@@ -805,10 +861,10 @@
   {
     "id": "4292851696",
     "name": [
-      "Bogue",
-      "博格"
+      "Bogue_OLD",
+      "博格_OLD"
     ],
-    "tier": "5",
+    "tier": 5,
     "type": "航空母艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA002.png"
@@ -816,10 +872,10 @@
   {
     "id": "4288657392",
     "name": [
-      "Independence",
-      "獨立"
+      "Independence_OLD",
+      "獨立_OLD"
     ],
-    "tier": "6",
+    "tier": 6,
     "type": "航空母艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA006.png"
@@ -827,10 +883,10 @@
   {
     "id": "4284463088",
     "name": [
-      "Ranger",
-      "遊騎兵"
+      "Ranger_OLD",
+      "遊騎兵_OLD"
     ],
-    "tier": "7",
+    "tier": 7,
     "type": "航空母艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA010.png"
@@ -838,11 +894,11 @@
   {
     "id": "3763320816",
     "name": [
-      "Saipan",
-      "賽班島",
-      "賽班"
+      "Saipan_OLD",
+      "賽班島_OLD",
+      "賽班_OLD"
     ],
-    "tier": "7",
+    "tier": 7,
     "type": "航空母艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA507.png"
@@ -850,11 +906,11 @@
   {
     "id": "4282365936",
     "name": [
-      "Lexington",
-      "列星頓",
-      "列克星頓"
+      "Lexington_OLD",
+      "列星頓_OLD",
+      "列克星頓_OLD"
     ],
-    "tier": "8",
+    "tier": 8,
     "type": "航空母艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA012.png"
@@ -862,10 +918,10 @@
   {
     "id": "3762272240",
     "name": [
-      "Enterprise",
-      "企業"
+      "Enterprise_OLD",
+      "企業_OLD"
     ],
-    "tier": "8",
+    "tier": 8,
     "type": "航空母艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA508.png"
@@ -873,10 +929,10 @@
   {
     "id": "4281317360",
     "name": [
-      "Essex",
-      "艾塞克斯"
+      "Essex_OLD",
+      "艾塞克斯_OLD"
     ],
-    "tier": "9",
+    "tier": 9,
     "type": "航空母艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA013.png"
@@ -884,13 +940,81 @@
   {
     "id": "4279220208",
     "name": [
-      "Midway",
-      "中途島"
+      "Midway_OLD",
+      "中途島_OLD"
     ],
-    "tier": "10",
+    "tier": 10,
     "type": "航空母艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA015.png"
+  },
+  {
+    "id": "4185896944",
+    "name": [
+      "Langley",
+      "蘭利"
+    ],
+    "tier": 4,
+    "type": "航空母艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA104.png"
+  },
+  {
+    "id": "4183799792",
+    "name": [
+      "Ranger",
+      "遊騎兵"
+    ],
+    "tier": 6,
+    "type": "航空母艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA106.png"
+  },
+  {
+    "id": "3741300720",
+    "name": [
+      "Saipan",
+      "賽班島",
+      "賽班"
+    ],
+    "tier": 8,
+    "type": "航空母艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA528.png"
+  },
+  {
+    "id": "4181702640",
+    "name": [
+      "Lexington",
+      "列星頓",
+      "列克星頓"
+    ],
+    "tier": 8,
+    "type": "航空母艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA108.png"
+  },
+  {
+    "id": "3751786480",
+    "name": [
+      "Enterprise",
+      "企業"
+    ],
+    "tier": 8,
+    "type": "航空母艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA518.png"
+  },
+  {
+    "id": "4179605488",
+    "name": [
+      "Midway",
+      "中途島"
+    ],
+    "tier": 10,
+    "type": "航空母艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASA110.png"
   },
   {
     "id": "4293867504",
