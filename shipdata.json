@@ -823,7 +823,7 @@
     "tier": 9,
     "type": "驅逐艦",
     "nation": "Japan",
-    "picurl": "http://glossary-ru-static.gcdn.co/icons/wows/current/vehicle/large/PJSD219.png"
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD219.png"
   },
   {
     "id": "4282267344",
@@ -845,7 +845,7 @@
     "tier": 10,
     "type": "驅逐艦",
     "nation": "Japan",
-    "picurl": "http://glossary-ru-static.gcdn.co/icons/wows/current/vehicle/large/PJSD210.png"
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PJSD210.png"
   },
   {
     "id": "4290754544",
@@ -1105,7 +1105,7 @@
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASB008.png"
   },
   {
-    "id": "",
+    "id": "4282333168",
     "name": [
       "North Carolina",
       "北卡羅萊納"
@@ -1401,6 +1401,17 @@
     "type": "巡洋艦",
     "nation": "USA",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC209.png"
+  },
+  {
+    "id": "3760109552",
+    "name": [
+      "Alaska",
+      "阿拉斯加"
+    ],
+    "tier": 9,
+    "type": "巡洋艦",
+    "nation": "USA",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PASC510.png"
   },
   {
     "id": "4273911792",
@@ -1893,8 +1904,8 @@
   {
     "id": "4187895600",
     "name": [
-      "V 25",
       "V25",
+      "V 25",
       "V-25"
     ],
     "tier": 2,
@@ -2278,6 +2289,73 @@
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSC110.png"
   },
   {
+    "id": "4187895760",
+    "name": [
+      "Medea",
+      "美迪亞"
+    ],
+    "tier": 2,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD102.png"
+  },
+  {
+    "id": "4186847184",
+    "name": [
+      "Valkyrie",
+      "瓦爾基麗",
+      "女武神"
+    ],
+    "tier": 3,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD103.png"
+  },
+  {
+    "id": "3767416784",
+    "name": [
+      "Campbeltown",
+      "坎貝爾鎮"
+    ],
+    "tier": 3,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD503.png"
+  },
+  {
+    "id": "4185798608",
+    "name": [
+      "Wakeful",
+      "覺醒"
+    ],
+    "tier": 4,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD104.png"
+  },
+  {
+    "id": "4184750032",
+    "name": [
+      "Acasta",
+      "阿卡斯塔"
+    ],
+    "tier": 5,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD105.png"
+  },
+  {
+    "id": "4183701456",
+    "name": [
+      "Icarus",
+      "伊卡魯斯"
+    ],
+    "tier": 6,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD106.png"
+  },
+  {
     "id": "3764271056",
     "name": [
       "Gallant",
@@ -2289,15 +2367,59 @@
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD506.png"
   },
   {
-    "id": "3767416784",
+    "id": "4182652880",
     "name": [
-      "Campbeltown",
-      "坎貝爾城"
+      "Jervis",
+      "賈維斯"
     ],
-    "tier": 3,
+    "tier": 7,
     "type": "驅逐艦",
     "nation": "UK",
-    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD503.png"
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD107.png"
+  },
+  {
+    "id": "4181604304",
+    "name": [
+      "Lightning",
+      "雷電"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD108.png"
+  },
+  {
+    "id": "3752736720",
+    "name": [
+      "Cossack",
+      "哥薩克"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD517.png"
+  },
+  {
+    "id": "4180555728",
+    "name": [
+      "Jutland",
+      "日德蘭"
+    ],
+    "tier": 9,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD109.png"
+  },
+  {
+    "id": "4179507152",
+    "name": [
+      "Daring",
+      "大膽"
+    ],
+    "tier": 10,
+    "type": "驅逐艦",
+    "nation": "UK",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PBSD110.png"
   },
   {
     "id": "4186912592",
@@ -2399,6 +2521,17 @@
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PFSB109.png"
   },
   {
+    "id": "3751753552",
+    "name": [
+      "Jean Bart",
+      "讓巴爾"
+    ],
+    "tier": 9,
+    "type": "戰列艦",
+    "nation": "France",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PFSB518.png"
+  },
+  {
     "id": "4179572560",
     "name": [
       "République",
@@ -2409,6 +2542,17 @@
     "type": "戰列艦",
     "nation": "France",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PFSB110.png"
+  },
+  {
+    "id": "3760142160",
+    "name": [
+      "Bourgogne",
+      "勃艮地"
+    ],
+    "tier": 10,
+    "type": "戰列艦",
+    "nation": "France",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PFSB510.png"
   },
   {
     "id": "4188976976",
@@ -2542,10 +2686,21 @@
       "Aigle",
       "鷹"
     ],
-    "tier": "6",
+    "tier": 6,
     "type": "驅逐艦",
     "nation": "france",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PFSD506.png"
+  },
+  {
+    "id": "3762173776",
+    "name": [
+      "Le Terrible",
+      "恐怖"
+    ],
+    "tier": 8,
+    "type": "驅逐艦",
+    "nation": "france",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PFSD508.png"
   },
   {
     "id": "4293866960",
@@ -2798,6 +2953,17 @@
     "type": "巡洋艦",
     "nation": "USSR",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC110.png"
+  },
+  {
+    "id": "3760109008",
+    "name": [
+      "Stalingrad",
+      "史達林格勒"
+    ],
+    "tier": 10,
+    "type": "巡洋艦",
+    "nation": "USSR",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PRSC510.png"
   },
   {
     "id": "4187895248",
