@@ -1,4 +1,4 @@
-﻿[{
+[{
     "id": "4292851408",
     "name": [
       "Hosho_OLD",
@@ -1804,13 +1804,24 @@
   {
     "id": "3762272048",
     "name": [
+      "Graf Zeppelin_OLD",
+      "齊柏林_OLD"
+    ],
+    "tier": 8,
+    "type": "航空母艦",
+    "nation": "Germany",
+    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSA508.png"
+  },
+  {
+    "id": "3751786288",
+    "name": [
       "Graf Zeppelin",
       "齊柏林"
     ],
     "tier": 8,
     "type": "航空母艦",
     "nation": "Germany",
-    "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PGSA508.png"
+    "picurl": "https://glossary-wows-global.gcdn.co/icons//vehicle/large/PGSA518_f5113bf40908c80252ce89199e2b7c733ba0531deb08b8b87bf6b2b7929abbe3.png"
   },
   {
     "id": "4186912560",
@@ -1870,7 +1881,7 @@
     "picurl": "https://glossary-wows-global.gcdn.co/icons//vehicle/large/PGSB504_8db2536aac25e4000fdc7280192fb32a198ed9c60c271941ede1f7b5c5e0bfd7.png"
   },
   {
-    "id": "",
+    "id": "4183766832",
     "name": [
       "Bayern",
       "巴伐利亞"
@@ -1884,7 +1895,7 @@
     "id": "4183766832",
     "name": [
       "Prinz Eitel Friedrich",
-      "巴伐利亞"
+      ""
     ],
     "tier": 6,
     "type": "戰列艦",
@@ -3997,7 +4008,7 @@
     ],
     "tier": 7,
     "type": "巡洋艦",
-    "nation": "Poland",
+    "nation": "europe",
     "picurl": "http://glossary-asia-static.gcdn.co/icons/wows/current/vehicle/large/PWSD501.png"
   },
   {
@@ -4008,7 +4019,7 @@
     ],
     "tier": 7,
     "type": "驅逐艦",
-    "nation": "Poland",
+    "nation": "europe",
     "picurl": "https://glossary-wows-global.gcdn.co/icons//vehicle/large/PWSD510_de7a25d5ee1bf67b7c40873f6d5ff32698e378a97741ebad74d0964d94806b0f.png"
   },
   {
